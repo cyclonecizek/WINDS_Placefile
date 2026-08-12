@@ -36,7 +36,6 @@ jobs:
         env:
           LOOKBACK_MINUTES: "90"
           STALE_MINUTES: "120"
-          WINDBARB_URL: "https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/windbarbs.png"
           KSC_WINDS_RESULT_URL: ${{ secrets.KSC_WINDS_RESULT_URL }}
         run: python src/ksc_winds_placefile.py
 
