@@ -47,7 +47,7 @@ TOKEN_AFTER_END = "AAAABaAAABaAAABaAABaAABaAABaAABaAndaBncnWnfaDnenXngaNnhnYnaaT
 # GitHub Pages location of the sprite sheet.
 BARB_URL = os.getenv(
     "WINDBARB_URL",
-    "https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/windbarbs.png",
+    "https://cyclonecizek.github.io/WINDS_Placefile/windbarbs.png",
 )
 
 LOOKBACK_MINUTES = int(os.getenv("LOOKBACK_MINUTES", "90"))
