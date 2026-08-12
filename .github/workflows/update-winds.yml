@@ -1,0 +1,63 @@
+name: Update KSC WINDS Placefiles
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Staggered two minutes after the field-mill updater.
+    - cron: "4,9,14,19,24,29,34,39,44,49,54,59 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ksc-winds-update
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependency
+        run: pip install -r requirements.txt
+
+      - name: Generate WINDS placefiles
+        env:
+          LOOKBACK_MINUTES: "90"
+          STALE_MINUTES: "120"
+          WINDBARB_URL: "https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/windbarbs.png"
+          KSC_WINDS_RESULT_URL: ${{ secrets.KSC_WINDS_RESULT_URL }}
+        run: python src/ksc_winds_placefile.py
+
+      - name: Commit updated WINDS output
+        run: |
+          git config user.name "ksc-winds-bot"
+          git config user.email "actions@users.noreply.github.com"
+
+          git add \
+            docs/ksc_winds_surface.txt \
+            docs/ksc_winds_54ft.txt \
+            docs/ksc_winds_200plus.txt \
+            docs/ksc_winds.json
+
+          if git diff --cached --quiet; then
+            echo "No WINDS change"
+            exit 0
+          fi
+
+          git commit -m "Update KSC WINDS observations"
+
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
