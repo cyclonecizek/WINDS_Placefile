@@ -26,6 +26,7 @@ import json
 import math
 import os
 import re
+import time
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -115,17 +116,65 @@ def fetch_export() -> str:
         "Accept": "text/csv,text/plain,application/octet-stream,*/*",
     }
 
-    try:
-        r = requests.get(url, timeout=60, headers=headers)
-    except requests.exceptions.SSLError:
-        if urlparse(url).hostname != "kscweather.ksc.nasa.gov":
-            raise
-        print("WARNING: retrying exact KSC archive host with certificate verification disabled")
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        r = requests.get(url, timeout=60, headers=headers, verify=False)
+    retry_delays = [0, 10, 20, 40, 60]
+    last_error = None
 
-    r.raise_for_status()
-    return r.text
+    for attempt, delay in enumerate(retry_delays, start=1):
+        if delay:
+            print(f"Retrying KSC WINDS request in {delay} seconds...")
+            time.sleep(delay)
+
+        try:
+            try:
+                r = requests.get(
+                    url,
+                    timeout=60,
+                    headers=headers,
+                )
+            except requests.exceptions.SSLError:
+                if urlparse(url).hostname != "kscweather.ksc.nasa.gov":
+                    raise
+                print(
+                    "WARNING: KSC TLS certificate chain could not be validated; "
+                    "retrying this exact NASA host with certificate verification disabled."
+                )
+                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+                r = requests.get(
+                    url,
+                    timeout=60,
+                    headers=headers,
+                    verify=False,
+                )
+
+            r.raise_for_status()
+
+            if attempt > 1:
+                print(f"KSC WINDS request succeeded on attempt {attempt}.")
+
+            return r.text
+
+        except (
+            requests.exceptions.ConnectionError,
+            requests.exceptions.Timeout,
+            requests.exceptions.HTTPError,
+        ) as exc:
+            last_error = exc
+            print(
+                f"KSC WINDS request attempt {attempt}/{len(retry_delays)} failed: "
+                f"{type(exc).__name__}: {exc}"
+            )
+
+            # Do not keep retrying permanent client-side HTTP errors such as 400/404.
+            if isinstance(exc, requests.exceptions.HTTPError):
+                response = getattr(exc, "response", None)
+                status = response.status_code if response is not None else None
+                if status is not None and 400 <= status < 500 and status != 429:
+                    raise
+
+    raise RuntimeError(
+        "KSC WINDS archive request failed after all retry attempts. "
+        f"Last error: {type(last_error).__name__}: {last_error}"
+    )
 
 def normalize_site(raw: str):
     raw = raw.strip()
