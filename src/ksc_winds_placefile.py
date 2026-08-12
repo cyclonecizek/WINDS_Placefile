@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 """
 NASA KSC WINDS WeatherTower archive -> three GRLevelX station-model placefiles.
 
@@ -338,7 +337,7 @@ def emit_station(lines, lat, lon, site, product, wind, thermo, now):
 
 def header(title):
     return [
-        f"Title: {title}",
+        f"; {title}",
         "RefreshSeconds: 60",
         "Threshold: 200",
         f'IconFile: 1, 64, 64, 32, 32, "{BARB_URL}"',
