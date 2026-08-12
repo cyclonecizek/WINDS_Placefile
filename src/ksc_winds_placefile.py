@@ -45,16 +45,13 @@ TOKEN_AFTER_END = "AAAABaAAABaAAABaAABaAABaAABaAABaAndaBncnWnfaDnenXngaNnhnYnaaT
 
 # GitHub Pages location of the sprite sheet.
 def default_windbarb_url():
+    # Work-laptop configuration: use the locally mounted wind-barb sprite.
+    # WINDBARB_URL can still override this if explicitly set.
     explicit = os.getenv("WINDBARB_URL", "").strip()
     if explicit:
         return explicit
 
-    repo = os.getenv("GITHUB_REPOSITORY", "").strip()
-    if "/" in repo:
-        owner, name = repo.split("/", 1)
-        return f"https://{owner}.github.io/{name}/windbarbs.png"
-
-    return "https://cyclonecizek.github.io/WINDS_Placefile/windbarbs.png"
+    return r"X:\C1722 Shares\45WS\WXR\Radar\1. Gibson Ridge\wind_barb.png"
 
 BARB_URL = default_windbarb_url()
 
