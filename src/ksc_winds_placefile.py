@@ -43,7 +43,7 @@ BASE60 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567"
 # Verified against controlled WeatherTower searches in August 2026.
 TOKEN_PREFIX = "Ba"
 TOKEN_BETWEEN = "ABa"
-TOKEN_AFTER_END = "AAAABaAAABaAAABaAABaAABaAABaAABaAndaBncnWnfaDnenXngaNnhnYnaaTnbnZaKaLoH"
+TOKEN_AFTER_END = "AAAABaAAABaAAABaAABaAABaAABaAaAndaBncnWaCnfaDnenXaEaFaGaHaIaMngaNnhnYaOaPaQaRaSnaaTnbnZaUaZaaabacadaeafagahaiajakalamanaoapaqarasatauavawaxayaVaWaXaYaza0a1a2a3oVoIoJoLoKoMoNoOoPoQoRoSoToUaJaKaLoH"
 
 # GitHub Pages location of the sprite sheet.
 def default_windbarb_url():
