@@ -4,6 +4,7 @@ NASA KSC WINDS WeatherTower archive -> three GRLevelX station-model placefiles.
 
 Outputs:
   docs/ksc_winds_surface.txt
+  docs/ksc_winds_lowest.txt
   docs/ksc_winds_54ft.txt
   docs/ksc_winds_200plus.txt
   docs/ksc_winds.json
@@ -26,6 +27,7 @@ import json
 import math
 import os
 import re
+import time
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -45,13 +47,16 @@ TOKEN_AFTER_END = "AAAABaAAABaAAABaAABaAABaAABaAABaAndaBncnWnfaDnenXngaNnhnYnaaT
 
 # GitHub Pages location of the sprite sheet.
 def default_windbarb_url():
-    # Work-laptop configuration: use the locally mounted wind-barb sprite.
-    # WINDBARB_URL can still override this if explicitly set.
     explicit = os.getenv("WINDBARB_URL", "").strip()
     if explicit:
         return explicit
 
-    return r"X:\C1722 Shares\45WS\WXR\Radar\1. Gibson Ridge\wind_barb.png"
+    repo = os.getenv("GITHUB_REPOSITORY", "").strip()
+    if "/" in repo:
+        owner, name = repo.split("/", 1)
+        return f"https://{owner}.github.io/{name}/wind_barb.png"
+
+    return "https://cyclonecizek.github.io/WINDS_Placefile/wind_barb.png"
 
 BARB_URL = default_windbarb_url()
 
@@ -121,17 +126,52 @@ def fetch_export() -> str:
         "Accept": "text/csv,text/plain,application/octet-stream,*/*",
     }
 
-    try:
-        r = requests.get(url, timeout=60, headers=headers)
-    except requests.exceptions.SSLError:
-        if urlparse(url).hostname != "kscweather.ksc.nasa.gov":
-            raise
-        print("WARNING: retrying exact KSC archive host with certificate verification disabled")
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        r = requests.get(url, timeout=60, headers=headers, verify=False)
+    retry_delays = [0, 10, 20, 40, 60]
+    last_error = None
 
-    r.raise_for_status()
-    return r.text
+    for attempt, delay in enumerate(retry_delays, start=1):
+        if delay:
+            print(f"Retrying KSC WINDS request in {delay} seconds...")
+            time.sleep(delay)
+
+        try:
+            try:
+                r = requests.get(url, timeout=60, headers=headers)
+            except requests.exceptions.SSLError:
+                if urlparse(url).hostname != "kscweather.ksc.nasa.gov":
+                    raise
+                print(
+                    "WARNING: KSC TLS certificate chain could not be validated; "
+                    "retrying this exact NASA host with certificate verification disabled."
+                )
+                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+                r = requests.get(url, timeout=60, headers=headers, verify=False)
+
+            r.raise_for_status()
+            if attempt > 1:
+                print(f"KSC WINDS request succeeded on attempt {attempt}.")
+            return r.text
+
+        except (
+            requests.exceptions.ConnectionError,
+            requests.exceptions.Timeout,
+            requests.exceptions.HTTPError,
+        ) as exc:
+            last_error = exc
+            print(
+                f"KSC WINDS request attempt {attempt}/{len(retry_delays)} failed: "
+                f"{type(exc).__name__}: {exc}"
+            )
+            if isinstance(exc, requests.exceptions.HTTPError):
+                response = getattr(exc, "response", None)
+                status = response.status_code if response is not None else None
+                if status is not None and 400 <= status < 500 and status != 429:
+                    raise
+
+    raise RuntimeError(
+        "KSC WINDS archive request failed after all retry attempts. "
+        f"Last error: {type(last_error).__name__}: {last_error}"
+    )
 
 def normalize_site(raw: str):
     raw = raw.strip()
@@ -242,6 +282,39 @@ def pick_surface(rows):
         wind = choose_side([o for o in wind_candidates if o.height_ft == wind.height_ft])
     return thermo, wind
 
+
+def pick_lowest_available(rows):
+    """
+    Select the lowest available thermodynamic and wind observations independently.
+
+    Thermodynamics:
+      lowest height with temperature or dew point
+
+    Wind:
+      lowest height with average wind direction and speed
+
+    Directional rows at the chosen height still use KSC's preferred-side logic.
+    """
+    thermo_candidates = [
+        o for o in rows
+        if o.temp_f is not None or o.dew_f is not None
+    ]
+    thermo = None
+    if thermo_candidates:
+        thermo_h = min(o.height_ft for o in thermo_candidates)
+        thermo = choose_side([o for o in thermo_candidates if o.height_ft == thermo_h])
+
+    wind_candidates = [
+        o for o in rows
+        if o.avg_spd is not None and o.avg_dir is not None
+    ]
+    wind = None
+    if wind_candidates:
+        wind_h = min(o.height_ft for o in wind_candidates)
+        wind = choose_side([o for o in wind_candidates if o.height_ft == wind_h])
+
+    return thermo, wind
+
 def pick_200plus(rows):
     candidates = [
         o for o in rows
@@ -308,27 +381,27 @@ def emit_station(lines, lat, lon, site, product, wind, thermo, now):
     h = esc(hover(site, product, wind, thermo, now))
     lines.append(f"Object: {lat:.8f}, {lon:.8f}")
 
-    # Wind barb at object center; base sprite points north and is rotated clockwise.
+    # Larger WHITE wind barb centered on the station.
     if wind and wind.avg_dir is not None and wind.avg_spd is not None:
-        lines.append("Color: 0 0 0")
+        lines.append("Color: 255 255 255")
         lines.append(
             f'Icon: 0, 0, {wind.avg_dir:.0f}, 1, {barb_icon(wind.avg_spd)}, "{h}"'
         )
 
-    # Temperature upper-right (black)
+    # Temperature: upper-left, RED.
     if thermo and thermo.temp_f is not None:
-        lines.append("Color: 0 0 0")
-        lines.append(f'Text: 18, 13, 1, "{thermo.temp_f:.0f}", "{h}"')
+        lines.append("Color: 255 55 55")
+        lines.append(f'Text: -30, 18, 1, "{thermo.temp_f:.0f}", "{h}"')
 
-    # Dew point lower-left (green)
+    # Dew point: lower-left, GREEN.
     if thermo and thermo.dew_f is not None:
-        lines.append("Color: 0 210 0")
-        lines.append(f'Text: -18, -13, 1, "{thermo.dew_f:.0f}", "{h}"')
+        lines.append("Color: 50 255 80")
+        lines.append(f'Text: -30, -10, 1, "{thermo.dew_f:.0f}", "{h}"')
 
-    # Peak wind lower-right (red)
+    # Peak/gust wind: lower-right, WHITE.
     if wind and wind.peak_spd is not None:
-        lines.append("Color: 235 40 40")
-        lines.append(f'Text: 20, -13, 1, "{wind.peak_spd:.0f}", "{h}"')
+        lines.append("Color: 255 255 255")
+        lines.append(f'Text: 31, -10, 1, "{wind.peak_spd:.0f}", "{h}"')
 
     lines.append("End:")
 
@@ -337,16 +410,17 @@ def header(title):
         f"; {title}",
         "RefreshSeconds: 60",
         "Threshold: 200",
-        f'IconFile: 1, 64, 64, 32, 32, "{BARB_URL}"',
-        'Font: 1, 11, 1, "Arial"',
+        f'IconFile: 1, 96, 96, 48, 48, "{BARB_URL}"',
+        'Font: 1, 13, 1, "Arial"',
         "; NASA KSC Spaceport Weather Archive WINDS tower data",
-        "; black=temp F, green=dewpoint F, black barb=avg wind, red=peak wind kt",
+        "; red=temp F, green=dewpoint F, white barb=avg wind, white=peak/gust kt",
         "; Hover wind barb/text for full observation.",
     ]
 
 def generate_products(obs, coords):
     now = datetime.now(timezone.utc)
     surface = header("KSC WINDS Surface")
+    lowest = header("KSC WINDS Lowest Available")
     ft54 = header("KSC WINDS 54 ft")
     plus200 = header("KSC WINDS 200+ ft")
     diagnostics = []
@@ -356,8 +430,13 @@ def generate_products(obs, coords):
         if not rows:
             continue
 
+        # Existing surface product: low-level constrained pairing.
         thermo_sfc, wind_sfc = pick_surface(rows)
         emit_station(surface, lat, lon, site, "Surface", wind_sfc, thermo_sfc, now)
+
+        # New product: absolute lowest available thermo + wind levels at each tower.
+        thermo_low, wind_low = pick_lowest_available(rows)
+        emit_station(lowest, lat, lon, site, "Lowest Available", wind_low, thermo_low, now)
 
         o54 = pick_height(rows, 54)
         emit_station(ft54, lat, lon, site, "54 ft", o54, o54, now)
@@ -370,17 +449,26 @@ def generate_products(obs, coords):
             "latest_time_utc": max(r.dt for r in rows).isoformat(),
             "surface_thermo_height_ft": thermo_sfc.height_ft if thermo_sfc else None,
             "surface_wind_height_ft": wind_sfc.height_ft if wind_sfc else None,
+            "lowest_thermo_height_ft": thermo_low.height_ft if thermo_low else None,
+            "lowest_wind_height_ft": wind_low.height_ft if wind_low else None,
             "has_54ft": o54 is not None,
             "selected_200plus_height_ft": o200.height_ft if o200 else None,
         })
 
-    return "\n".join(surface)+"\n", "\n".join(ft54)+"\n", "\n".join(plus200)+"\n", diagnostics
+    return (
+        "\n".join(surface) + "\n",
+        "\n".join(lowest) + "\n",
+        "\n".join(ft54) + "\n",
+        "\n".join(plus200) + "\n",
+        diagnostics,
+    )
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", help="local WeatherTower export CSV")
     ap.add_argument("--sites", default="docs/ksc_winds_tower_sites.csv")
     ap.add_argument("--surface", default="docs/ksc_winds_surface.txt")
+    ap.add_argument("--lowest", default="docs/ksc_winds_lowest.txt")
     ap.add_argument("--ft54", default="docs/ksc_winds_54ft.txt")
     ap.add_argument("--plus200", default="docs/ksc_winds_200plus.txt")
     ap.add_argument("--json-output", default="docs/ksc_winds.json")
@@ -402,9 +490,10 @@ def main():
     text = Path(args.input).read_text(encoding="utf-8", errors="replace") if args.input else fetch_export()
     obs = parse_csv(text)
     coords = load_sites(Path(args.sites))
-    surface, ft54, plus200, diag = generate_products(obs, coords)
+    surface, lowest, ft54, plus200, diag = generate_products(obs, coords)
 
     Path(args.surface).write_text(surface, encoding="utf-8")
+    Path(args.lowest).write_text(lowest, encoding="utf-8")
     Path(args.ft54).write_text(ft54, encoding="utf-8")
     Path(args.plus200).write_text(plus200, encoding="utf-8")
     Path(args.json_output).write_text(json.dumps({
@@ -415,7 +504,7 @@ def main():
     }, indent=2), encoding="utf-8")
 
     print(f"Parsed {len(obs)} WeatherTower rows; coordinate sites={len(coords)}")
-    print("Wrote:", args.surface, args.ft54, args.plus200)
+    print("Wrote:", args.surface, args.lowest, args.ft54, args.plus200)
 
 if __name__ == "__main__":
     main()
