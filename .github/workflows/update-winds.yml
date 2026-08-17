@@ -16,7 +16,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 8
 
     steps:
       - name: Checkout
@@ -34,7 +34,7 @@ jobs:
 
       - name: Generate WINDS placefiles
         env:
-          LOOKBACK_MINUTES: "90"
+          LOOKBACK_MINUTES: "60"
           STALE_MINUTES: "120"
           KSC_WINDS_RESULT_URL: ${{ secrets.KSC_WINDS_RESULT_URL }}
         run: python src/ksc_winds_placefile.py
