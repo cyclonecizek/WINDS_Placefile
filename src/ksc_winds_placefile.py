@@ -43,7 +43,12 @@ BASE60 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567"
 # Verified against controlled WeatherTower searches in August 2026.
 TOKEN_PREFIX = "Ba"
 TOKEN_BETWEEN = "ABa"
-TOKEN_AFTER_END = "AAAABaAAABaAAABaAABaAABaAABaAaAndaBncnWaCnfaDnenXaEaFaGaHaIaMngaNnhnYaOaPaQaRaSnaaTnbnZaUaZaaabacadaeafagahaiajakalamanaoapaqarasatauavawaxayaVaWaXaYaza0a1a2a3oVoIoJoLoKoMoNoOoPoQoRoSoToUaJaKaLoH"
+GROUP_TOKEN_SUFFIXES = [
+    "AAAABaAAABaAAABaAABaAABaAABaAABaAaAndaBncnWaCnfaDnenXaEaFaGaHaIaMngaNnhnY",
+    "AAAABaAAABaAAABaAABaAABaAABaAABaAaOaPaQaRaSnaaTnbnZaUaZaaabacadaeafagahai",
+    "OAAABaAAABaAAABaAABaAABaAABaAABaAajakalamanaoapaqarasatauavawaxayaXaY",
+    "OAAABaAAABaAAABaAABaAABaAABaAABaAaza0a1a2a3oVoIoJoNoOoPoToUaJaKaL",
+]
 
 # GitHub Pages location of the sprite sheet.
 def default_windbarb_url():
@@ -101,26 +106,20 @@ def encode_dt(dt: datetime) -> str:
     dt = dt.astimezone(timezone.utc)
     return enc60(dt.month) + enc60(dt.day) + enc60(dt.hour) + enc60(dt.minute)
 
-def build_token(start: datetime, end: datetime) -> str:
+def build_token(start: datetime, end: datetime, suffix: str) -> str:
     if end <= start:
         raise ValueError("end must be later than start")
     if start.year != 2026 or end.year != 2026:
         raise ValueError("Automatic WeatherTower token is currently verified only for 2026")
-    return TOKEN_PREFIX + encode_dt(start) + TOKEN_BETWEEN + encode_dt(end) + TOKEN_AFTER_END
+    return TOKEN_PREFIX + encode_dt(start) + TOKEN_BETWEEN + encode_dt(end) + suffix
 
-def build_export_url(start: datetime, end: datetime) -> str:
-    return "https://kscweather.ksc.nasa.gov/wxarchive/WeatherTower/Export/" + build_token(start, end)
+def build_export_url(start: datetime, end: datetime, suffix: str) -> str:
+    return (
+        "https://kscweather.ksc.nasa.gov/wxarchive/WeatherTower/Export/"
+        + build_token(start, end, suffix)
+    )
 
-def fetch_export() -> str:
-    override = os.getenv("KSC_WINDS_RESULT_URL", "").strip()
-    if override:
-        url = override
-    else:
-        end = datetime.now(timezone.utc).replace(second=0, microsecond=0)
-        start = end - timedelta(minutes=LOOKBACK_MINUTES)
-        url = build_export_url(start, end)
-
-    print("KSC WINDS export URL:", url)
+def request_export(url: str, label: str) -> str:
     headers = {
         "User-Agent": USER_AGENT,
         "Accept": "text/csv,text/plain,application/octet-stream,*/*",
@@ -131,7 +130,7 @@ def fetch_export() -> str:
 
     for attempt, delay in enumerate(retry_delays, start=1):
         if delay:
-            print(f"Retrying KSC WINDS request in {delay} seconds...")
+            print(f"{label}: retrying in {delay} seconds...")
             time.sleep(delay)
 
         try:
@@ -141,15 +140,16 @@ def fetch_export() -> str:
                 if urlparse(url).hostname != "kscweather.ksc.nasa.gov":
                     raise
                 print(
-                    "WARNING: KSC TLS certificate chain could not be validated; "
-                    "retrying this exact NASA host with certificate verification disabled."
+                    f"{label}: WARNING - KSC TLS certificate chain could not be "
+                    "validated; retrying this exact NASA host with certificate "
+                    "verification disabled."
                 )
                 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
                 r = requests.get(url, timeout=60, headers=headers, verify=False)
 
             r.raise_for_status()
             if attempt > 1:
-                print(f"KSC WINDS request succeeded on attempt {attempt}.")
+                print(f"{label}: request succeeded on attempt {attempt}.")
             return r.text
 
         except (
@@ -159,9 +159,11 @@ def fetch_export() -> str:
         ) as exc:
             last_error = exc
             print(
-                f"KSC WINDS request attempt {attempt}/{len(retry_delays)} failed: "
+                f"{label}: request attempt {attempt}/{len(retry_delays)} failed: "
                 f"{type(exc).__name__}: {exc}"
             )
+
+            # 400/401/403/404 etc. are normally permanent for that token.
             if isinstance(exc, requests.exceptions.HTTPError):
                 response = getattr(exc, "response", None)
                 status = response.status_code if response is not None else None
@@ -169,9 +171,67 @@ def fetch_export() -> str:
                     raise
 
     raise RuntimeError(
-        "KSC WINDS archive request failed after all retry attempts. "
+        f"{label}: KSC archive request failed after all retry attempts. "
         f"Last error: {type(last_error).__name__}: {last_error}"
     )
+
+def fetch_exports() -> list[tuple[str, str]]:
+    """
+    Fetch the full WINDS network as four smaller KSC archive requests.
+
+    Returns a list of (group_name, csv_text). All groups use exactly the
+    same rolling UTC time window so observations can be merged cleanly.
+    """
+    override = os.getenv("KSC_WINDS_RESULT_URL", "").strip()
+    if override:
+        print("KSC_WINDS_RESULT_URL override supplied; using it as one test group.")
+        return [("Override", request_export(override, "Override"))]
+
+    end = datetime.now(timezone.utc).replace(second=0, microsecond=0)
+    start = end - timedelta(minutes=LOOKBACK_MINUTES)
+
+    results = []
+    for idx, suffix in enumerate(GROUP_TOKEN_SUFFIXES, start=1):
+        label = f"Group {idx}"
+        url = build_export_url(start, end, suffix)
+        print(f"{label} KSC WINDS export URL: {url}")
+        text = request_export(url, label)
+        results.append((label, text))
+
+    return results
+
+def merge_group_exports(group_exports: list[tuple[str, str]]) -> list[Obs]:
+    """
+    Parse all group CSVs, concatenate them, and remove exact duplicate rows.
+    Overlapping tower selections are safe.
+    """
+    merged = []
+    seen = set()
+
+    for label, text in group_exports:
+        rows = parse_csv(text)
+        sites = sorted({o.site for o in rows})
+        print(
+            f"{label}: parsed {len(rows)} rows from {len(sites)} physical sites: "
+            + ", ".join(sites)
+        )
+
+        for o in rows:
+            key = (
+                o.dt, o.raw_site, o.site, o.height_ft,
+                o.avg_dir, o.avg_spd, o.peak_dir, o.peak_spd,
+                o.peak10_dir, o.peak10_spd, o.deviation,
+                o.temp_f, o.dew_f, o.rh, o.pressure,
+            )
+            if key not in seen:
+                seen.add(key)
+                merged.append(o)
+
+    print(
+        f"Merged groups: {len(merged)} unique rows, "
+        f"{len({o.site for o in merged})} physical sites total."
+    )
+    return merged
 
 def normalize_site(raw: str):
     raw = raw.strip()
@@ -259,11 +319,9 @@ def choose_side(rows):
     return max(rows, key=lambda o: (side_score(o), o.dt))
 
 def latest_time_rows(obs, site):
-    rows = [o for o in obs if o.site == site]
-    if not rows:
-        return []
-    newest = max(o.dt for o in rows)
-    return [o for o in rows if o.dt == newest]
+    # Keep the full lookback window for this site. Individual selectors below
+    # choose the latest/preferred record for their own height/variable.
+    return [o for o in obs if o.site == site]
 
 def pick_height(rows, height):
     return choose_side([o for o in rows if o.height_ft == height])
@@ -484,11 +542,15 @@ def main():
         else:
             end = datetime.now(timezone.utc).replace(second=0, microsecond=0)
             start = end - timedelta(minutes=LOOKBACK_MINUTES)
-        print(build_export_url(start, end))
+        for idx, suffix in enumerate(GROUP_TOKEN_SUFFIXES, start=1):
+            print(f"Group {idx}: {build_export_url(start, end, suffix)}")
         return
 
-    text = Path(args.input).read_text(encoding="utf-8", errors="replace") if args.input else fetch_export()
-    obs = parse_csv(text)
+    if args.input:
+        text = Path(args.input).read_text(encoding="utf-8", errors="replace")
+        obs = parse_csv(text)
+    else:
+        obs = merge_group_exports(fetch_exports())
     coords = load_sites(Path(args.sites))
     surface, lowest, ft54, plus200, diag = generate_products(obs, coords)
 
@@ -499,6 +561,7 @@ def main():
     Path(args.json_output).write_text(json.dumps({
         "generated_utc": datetime.now(timezone.utc).isoformat(),
         "records_parsed": len(obs),
+        "physical_sites_in_exports": len({o.site for o in obs}),
         "sites_with_coordinates": len(coords),
         "sites": diag,
     }, indent=2), encoding="utf-8")
