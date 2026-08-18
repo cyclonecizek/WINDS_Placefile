@@ -61,7 +61,7 @@ def default_windbarb_url():
         owner, name = repo.split("/", 1)
         return f"https://{owner}.github.io/{name}/wind_barb.png"
 
-    return "https://cyclonecizek.github.io/WINDS_Placefile/wind_barb.png"
+    return "http://cyclonecizek.github.io/WINDS_Placefile/wind_barb.png"
 
 BARB_URL = default_windbarb_url()
 
