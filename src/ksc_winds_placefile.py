@@ -59,7 +59,7 @@ def default_windbarb_url():
     repo = os.getenv("GITHUB_REPOSITORY", "").strip()
     if "/" in repo:
         owner, name = repo.split("/", 1)
-        return f"https://{owner}.github.io/{name}/wind_barb.png"
+        return f"http://{owner}.github.io/{name}/wind_barb.png"
 
     return "http://cyclonecizek.github.io/WINDS_Placefile/wind_barb.png"
 
