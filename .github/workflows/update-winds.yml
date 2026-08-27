@@ -39,6 +39,16 @@ jobs:
           KSC_WINDS_RESULT_URL: ${{ secrets.KSC_WINDS_RESULT_URL }}
         run: python src/ksc_winds_placefile.py
 
+      - name: Generate Barnes divergence/convergence contours
+        env:
+          BARNES_GRID_SPACING_M: "1000"
+          BARNES_LENGTH_KM: "10"
+          BARNES_GAMMA: "0.30"
+          BARNES_MAX_INFLUENCE_KM: "24"
+          BARNES_NEAREST_STATION_KM: "10"
+          BARNES_MIN_NEARBY_STATIONS: "3"
+        run: python src/ksc_winds_barnes_divergence.py
+
       - name: Commit updated WINDS output
         run: |
           git config user.name "ksc-winds-bot"
@@ -49,6 +59,8 @@ jobs:
             docs/ksc_winds_lowest.txt \
             docs/ksc_winds_54ft.txt \
             docs/ksc_winds_200plus.txt \
+            docs/ksc_winds_54ft_barnes_divergence.txt \
+            docs/ksc_winds_54ft_barnes_divergence.json \
             docs/ksc_winds.json
 
           if git diff --cached --quiet; then
