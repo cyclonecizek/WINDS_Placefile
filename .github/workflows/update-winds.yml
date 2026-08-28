@@ -3,8 +3,8 @@ name: Update KSC WINDS Placefiles
 on:
   workflow_dispatch:
   schedule:
-    # Staggered two minutes after the field-mill updater.
-    - cron: "4,9,14,19,24,29,34,39,44,49,54,59 * * * *"
+    # Request an update every 5 minutes (UTC).
+    - cron: "*/5 * * * *"
 
 permissions:
   contents: write
@@ -23,6 +23,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Log workflow start time
+        run: |
+          echo "GitHub event: ${{ github.event_name }}"
+          echo "Runner started (UTC): $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
 
       - name: Set up Python
         uses: actions/setup-python@v5
