@@ -278,13 +278,22 @@ def main():
 
     if args.input:
         raw = Path(args.input).read_text(encoding="utf-8", errors="replace")
+        obs = winds.parse_csv(raw)
     else:
-        # The production WINDS module already knows how to obtain the selected
-        # KSC tower groups. Reusing it prevents this add-on from duplicating the
-        # archive token/group-selection configuration.
-        raw = winds.fetch_export()
+        # Current production WINDS generator downloads the full tower network
+        # as four KSC archive groups, then merges/de-duplicates those groups.
+        # Reuse that exact production path for the 1-hour loop.
+        if hasattr(winds, "fetch_exports") and hasattr(winds, "merge_group_exports"):
+            obs = winds.merge_group_exports(winds.fetch_exports())
+        elif hasattr(winds, "fetch_export"):
+            # Backward compatibility with older single-export generator.
+            obs = winds.parse_csv(winds.fetch_export())
+        else:
+            raise RuntimeError(
+                "ksc_winds_placefile.py exposes neither the current "
+                "fetch_exports()/merge_group_exports() API nor legacy fetch_export()."
+            )
 
-    obs = winds.parse_csv(raw)
     coords = winds.load_sites(Path(args.sites))
 
     outdir = Path(args.outdir)
