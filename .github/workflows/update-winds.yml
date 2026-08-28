@@ -41,11 +41,11 @@ jobs:
 
       - name: Generate Barnes divergence/convergence contours
         env:
-          BARNES_GRID_SPACING_M: "1000"
-          BARNES_LENGTH_KM: "10"
+          BARNES_GRID_SPACING_M: "500"
+          BARNES_LENGTH_KM: "8"
           BARNES_GAMMA: "0.30"
-          BARNES_MAX_INFLUENCE_KM: "24"
-          BARNES_NEAREST_STATION_KM: "10"
+          BARNES_MAX_INFLUENCE_KM: "20"
+          BARNES_NEAREST_STATION_KM: "9"
           BARNES_MIN_NEARBY_STATIONS: "3"
         run: python src/ksc_winds_barnes_divergence.py
 
