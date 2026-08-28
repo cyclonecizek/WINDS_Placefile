@@ -45,6 +45,7 @@ BARNES_GAMMA = float(os.getenv("BARNES_GAMMA", "0.30"))
 MAX_INFLUENCE_KM = float(os.getenv("BARNES_MAX_INFLUENCE_KM", "20"))
 NEAREST_STATION_KM = float(os.getenv("BARNES_NEAREST_STATION_KM", "9"))
 MIN_NEARBY_STATIONS = int(os.getenv("BARNES_MIN_NEARBY_STATIONS", "3"))
+HULL_BUFFER_KM = float(os.getenv("BARNES_HULL_BUFFER_KM", "12"))
 
 # Contour values are displayed in 10^-4 s^-1.
 # One-unit spacing creates the dense contour appearance used by the
@@ -242,6 +243,49 @@ def point_in_polygon(x, y, poly):
     return inside
 
 
+
+def point_to_segment_distance(x, y, ax, ay, bx, by):
+    """Shortest distance from point (x,y) to line segment AB, in meters."""
+    vx = bx - ax
+    vy = by - ay
+    wx = x - ax
+    wy = y - ay
+    vv = vx*vx + vy*vy
+    if vv <= 0:
+        return math.hypot(x - ax, y - ay)
+
+    t = max(0.0, min(1.0, (wx*vx + wy*vy) / vv))
+    px = ax + t*vx
+    py = ay + t*vy
+    return math.hypot(x - px, y - py)
+
+
+def distance_to_polygon(x, y, poly):
+    """Distance in meters to the nearest edge of polygon."""
+    if not poly:
+        return float("inf")
+    if len(poly) == 1:
+        return math.hypot(x - poly[0][0], y - poly[0][1])
+
+    best = float("inf")
+    for i in range(len(poly)):
+        ax, ay = poly[i]
+        bx, by = poly[(i + 1) % len(poly)]
+        best = min(best, point_to_segment_distance(x, y, ax, ay, bx, by))
+    return best
+
+
+def point_in_buffered_polygon(x, y, poly, buffer_m):
+    """
+    Accept points inside the tower convex hull or within buffer_m of its edge.
+
+    This expands the objective-analysis footprint without removing the local
+    station-support tests that guard against unsupported extrapolation.
+    """
+    if point_in_polygon(x, y, poly):
+        return True
+    return distance_to_polygon(x, y, poly) <= buffer_m
+
 def weighted_analysis(x, y, stations, attr, kappa, cutoff_m):
     num = den = 0.0
     nearby = 0
@@ -289,7 +333,9 @@ def two_pass_barnes(stations, xs, ys):
 
     for j, y in enumerate(ys):
         for i, x in enumerate(xs):
-            if not point_in_polygon(x, y, hull):
+            if not point_in_buffered_polygon(
+                x, y, hull, HULL_BUFFER_KM * 1000.0
+            ):
                 continue
 
             first_u, nearby, nearest = weighted_analysis(
@@ -573,13 +619,15 @@ def build_placefile(stations):
 
     lat0, lon0, coslat = project_stations(stations)
 
-    minx = min(s.x for s in stations)
-    maxx = max(s.x for s in stations)
-    miny = min(s.y for s in stations)
-    maxy = max(s.y for s in stations)
+    buffer_m = HULL_BUFFER_KM * 1000.0
+    minx = min(s.x for s in stations) - buffer_m
+    maxx = max(s.x for s in stations) + buffer_m
+    miny = min(s.y for s in stations) - buffer_m
+    maxy = max(s.y for s in stations) + buffer_m
 
-    # Grid spans the tower-network bounding box. The objective field is later
-    # clipped to the station convex hull and local-support criteria.
+    # Grid extends beyond the tower network by a configurable buffer.
+    # The objective field is still constrained by the buffered hull plus
+    # nearest-station and minimum-local-support criteria.
     nx = max(3, int(math.ceil((maxx-minx)/GRID_SPACING_M)) + 1)
     ny = max(3, int(math.ceil((maxy-miny)/GRID_SPACING_M)) + 1)
     xs = [minx + i*GRID_SPACING_M for i in range(nx)]
@@ -607,6 +655,7 @@ def build_placefile(stations):
         f"; Latest source observation: {obs_summary}",
         f"; Barnes length scale: {BARNES_LENGTH_KM:g} km; gamma={BARNES_GAMMA:g}",
         f"; Grid spacing: {GRID_SPACING_M/1000:g} km",
+        f"; Tower-network hull buffer: {HULL_BUFFER_KM:g} km",
     ]
 
     counts = {}
@@ -649,6 +698,7 @@ def build_placefile(stations):
         "max_influence_km": MAX_INFLUENCE_KM,
         "nearest_station_km": NEAREST_STATION_KM,
         "min_nearby_stations": MIN_NEARBY_STATIONS,
+        "hull_buffer_km": HULL_BUFFER_KM,
         "grid_nx": nx,
         "grid_ny": ny,
         "valid_divergence_gridpoints": len(valid_values),
