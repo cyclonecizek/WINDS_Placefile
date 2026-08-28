@@ -54,10 +54,19 @@ def iso_noz(dt: datetime) -> str:
     return dt.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%S")
 
 
-def frame_times(obs, now: datetime):
-    cutoff = now - timedelta(minutes=LOOP_MINUTES)
-    vals = sorted({o.dt for o in obs if cutoff <= o.dt <= now})
-    return vals
+def frame_times(obs, now: datetime | None = None):
+    """
+    Return the last LOOP_MINUTES of *actual source observation times*.
+
+    The loop is anchored to the newest KSC observation in the download, not
+    wall-clock now.  This prevents KSC archive latency from creating a
+    misleading empty tail at the end of the loop.
+    """
+    if not obs:
+        return []
+    latest_data = max(o.dt for o in obs)
+    cutoff = latest_data - timedelta(minutes=LOOP_MINUTES)
+    return sorted({o.dt for o in obs if cutoff <= o.dt <= latest_data})
 
 
 def rows_for_site_frame(obs_by_site, site: str, frame: datetime):
@@ -108,35 +117,21 @@ def header_from_live(winds, title: str):
 
 
 def generate_tower_loop(winds, obs, coords, product_key: str, title: str):
-    now = datetime.now(timezone.utc)
-    frames = frame_times(obs, now)
+    frames = frame_times(obs)
     lines = header_from_live(winds, title)
-    lines += [
-        "; 1-hour looping version using GRLevelX TimeRange.",
-        f"; Frames available: {len(frames)}",
-    ]
 
     obs_by_site = defaultdict(list)
     for o in obs:
         obs_by_site[o.site].append(o)
 
-    frame_counts = []
+    # Build each candidate frame first.  Frames with zero plotted stations are
+    # discarded, so the loop cannot finish with one or two blank product frames.
+    built_frames = []
 
-    for idx, frame in enumerate(frames):
-        if idx + 1 < len(frames):
-            end = frames[idx + 1]
-        else:
-            end = frame + timedelta(minutes=FRAME_HOLD_MINUTES)
-
-        # Do not create zero/negative ranges if duplicate/odd timestamps appear.
-        if end <= frame:
-            continue
-
-        lines.append("")
-        lines.append(f"; Frame {frame:%Y-%m-%d %H:%MZ}")
-        lines.append(f"TimeRange: {iso_noz(frame)} {iso_noz(end)}")
-
+    for frame in frames:
+        body = []
         plotted = 0
+
         for site, (lat, lon) in sorted(coords.items()):
             rows = rows_for_site_frame(obs_by_site, site, frame)
             if not rows:
@@ -159,12 +154,45 @@ def generate_tower_loop(winds, obs, coords, product_key: str, title: str):
             else:
                 raise ValueError(product_key)
 
-            before = len(lines)
-            # Passing frame as "now" keeps historical hover age sensible and
-            # avoids current-time stale filtering inside the live emitter.
-            winds.emit_station(lines, lat, lon, site, label, wind, thermo, frame)
-            if len(lines) > before:
+            before = len(body)
+            # Use the historical frame time as "now" so the existing emitter
+            # does not reject old loop frames as stale.
+            winds.emit_station(body, lat, lon, site, label, wind, thermo, frame)
+            if len(body) > before:
                 plotted += 1
+
+        if plotted > 0:
+            built_frames.append((frame, body, plotted))
+
+    latest_valid = built_frames[-1][0] if built_frames else None
+    lines += [
+        "; 1-hour looping version using GRLevelX TimeRange.",
+        "; Loop ends on the newest source time that contains data for this product.",
+        f"; Frames available: {len(built_frames)}",
+        (
+            f"; Latest valid frame: {latest_valid:%Y-%m-%d %H:%MZ}"
+            if latest_valid else
+            "; Latest valid frame: none"
+        ),
+    ]
+
+    frame_counts = []
+
+    for idx, (frame, body, plotted) in enumerate(built_frames):
+        if idx + 1 < len(built_frames):
+            end = built_frames[idx + 1][0]
+        else:
+            # Keep the final valid observation visible for one normal WINDS
+            # interval.  No later empty candidate frames are emitted.
+            end = frame + timedelta(minutes=FRAME_HOLD_MINUTES)
+
+        if end <= frame:
+            continue
+
+        lines.append("")
+        lines.append(f"; Frame {frame:%Y-%m-%d %H:%MZ}")
+        lines.append(f"TimeRange: {iso_noz(frame)} {iso_noz(end)}")
+        lines.extend(body)
 
         frame_counts.append({
             "time_utc": frame.isoformat(),
@@ -210,8 +238,7 @@ def barnes_body(placefile_text: str):
 
 
 def generate_barnes_loop(winds, barnes, obs, coords):
-    now = datetime.now(timezone.utc)
-    frames = frame_times(obs, now)
+    frames = frame_times(obs)
 
     lines = [
         "; KSC WINDS 54-ft Barnes Divergence / Convergence - 1 Hour Loop",
@@ -219,6 +246,7 @@ def generate_barnes_loop(winds, barnes, obs, coords):
         "Threshold: 200",
         "; Uses GRLevelX TimeRange (placefile version 1.5).",
         "; Each frame is independently analyzed from the 54-ft tower winds.",
+        "; Blank/unsupported trailing frames are omitted.",
         "; Negative divergence = convergence (warm colors).",
         "; Positive divergence = divergence (cool colors).",
         f"; Grid spacing: {barnes.GRID_SPACING_M/1000:g} km",
@@ -230,12 +258,9 @@ def generate_barnes_loop(winds, barnes, obs, coords):
     for o in obs:
         obs_by_site[o.site].append(o)
 
-    frame_diag = []
-    for idx, frame in enumerate(frames):
-        end = frames[idx + 1] if idx + 1 < len(frames) else frame + timedelta(minutes=FRAME_HOLD_MINUTES)
-        if end <= frame:
-            continue
+    built_frames = []
 
+    for frame in frames:
         stations = []
         for site, (lat, lon) in sorted(coords.items()):
             rows = rows_for_site_frame(obs_by_site, site, frame)
@@ -248,6 +273,31 @@ def generate_barnes_loop(winds, barnes, obs, coords):
 
         frame_text, diag = barnes.build_placefile(stations)
         body = barnes_body(frame_text)
+
+        # A valid Barnes loop frame must contain actual contour drawing commands,
+        # not merely an analysis timestamp with insufficient station support.
+        has_contours = any(line.startswith("Line:") for line in body)
+        if stations and has_contours:
+            built_frames.append((frame, body, stations, diag))
+
+    latest_valid = built_frames[-1][0] if built_frames else None
+    lines += [
+        (
+            f"; Latest valid contour frame: {latest_valid:%Y-%m-%d %H:%MZ}"
+            if latest_valid else
+            "; Latest valid contour frame: none"
+        )
+    ]
+
+    frame_diag = []
+    for idx, (frame, body, stations, diag) in enumerate(built_frames):
+        end = (
+            built_frames[idx + 1][0]
+            if idx + 1 < len(built_frames)
+            else frame + timedelta(minutes=FRAME_HOLD_MINUTES)
+        )
+        if end <= frame:
+            continue
 
         lines.append("")
         lines.append(f"; Barnes frame {frame:%Y-%m-%d %H:%MZ}; stations={len(stations)}")
