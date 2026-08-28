@@ -39,25 +39,64 @@ EARTH_RADIUS_M = 6371000.0
 KT_TO_MPS = 0.5144444444444445
 
 # Defaults tuned for the spatial scale of the KSC tower network.
-GRID_SPACING_M = float(os.getenv("BARNES_GRID_SPACING_M", "1000"))
-BARNES_LENGTH_KM = float(os.getenv("BARNES_LENGTH_KM", "10"))
+GRID_SPACING_M = float(os.getenv("BARNES_GRID_SPACING_M", "500"))
+BARNES_LENGTH_KM = float(os.getenv("BARNES_LENGTH_KM", "8"))
 BARNES_GAMMA = float(os.getenv("BARNES_GAMMA", "0.30"))
-MAX_INFLUENCE_KM = float(os.getenv("BARNES_MAX_INFLUENCE_KM", "24"))
-NEAREST_STATION_KM = float(os.getenv("BARNES_NEAREST_STATION_KM", "10"))
+MAX_INFLUENCE_KM = float(os.getenv("BARNES_MAX_INFLUENCE_KM", "20"))
+NEAREST_STATION_KM = float(os.getenv("BARNES_NEAREST_STATION_KM", "9"))
 MIN_NEARBY_STATIONS = int(os.getenv("BARNES_MIN_NEARBY_STATIONS", "3"))
 
 # Contour values are displayed in 10^-4 s^-1.
-CONTOURS = [
-    (-8.0, (170, 0, 0), 4),       # strong convergence
-    (-6.0, (225, 30, 30), 3),
-    (-4.0, (255, 85, 25), 3),
-    (-2.0, (255, 165, 45), 2),
-    ( 0.0, (235, 235, 235), 1),
-    ( 2.0, (140, 230, 255), 2),
-    ( 4.0, (45, 190, 255), 3),
-    ( 6.0, (35, 125, 255), 3),
-    ( 8.0, (45, 75, 225), 4),     # strong divergence
-]
+# One-unit spacing creates the dense contour appearance used by the
+# operational-style display. Stronger / even-numbered contours are thicker.
+def contour_style(level: float):
+    """Return (RGB, line_width) for a divergence contour."""
+    a = abs(level)
+
+    if level < 0:
+        # Convergence: yellow/orange -> red as magnitude increases.
+        if a >= 10:
+            color = (205, 20, 25)
+        elif a >= 8:
+            color = (245, 40, 35)
+        elif a >= 6:
+            color = (255, 85, 25)
+        elif a >= 4:
+            color = (255, 135, 20)
+        elif a >= 2:
+            color = (255, 190, 20)
+        else:
+            color = (255, 220, 75)
+    elif level > 0:
+        # Divergence: pale cyan -> deep blue as magnitude increases.
+        if a >= 10:
+            color = (40, 65, 210)
+        elif a >= 8:
+            color = (35, 105, 245)
+        elif a >= 6:
+            color = (25, 155, 255)
+        elif a >= 4:
+            color = (25, 205, 245)
+        elif a >= 2:
+            color = (75, 225, 235)
+        else:
+            color = (155, 240, 235)
+    else:
+        color = (245, 245, 245)
+
+    if level == 0:
+        width = 2
+    elif a >= 8:
+        width = 3
+    elif int(round(a)) % 2 == 0:
+        width = 2
+    else:
+        width = 1
+
+    return color, width
+
+
+CONTOUR_LEVELS = [float(v) for v in range(-12, 13)]
 
 
 @dataclass
@@ -388,6 +427,116 @@ def contour_segments(div, xs, ys, level):
     return segments
 
 
+
+def _point_key(p, tolerance_m=1.0):
+    """Quantized key used to join marching-squares segments."""
+    return (
+        int(round(p[0] / tolerance_m)),
+        int(round(p[1] / tolerance_m)),
+    )
+
+
+def stitch_segments(segments):
+    """
+    Join two-point marching-squares segments into continuous polylines.
+
+    GR draws these much more cleanly than hundreds of separate 2-point Line
+    objects, and the result resembles traditional analyzed weather contours.
+    """
+    if not segments:
+        return []
+
+    adjacency = {}
+    points = {}
+
+    for idx, (a, b) in enumerate(segments):
+        ka = _point_key(a)
+        kb = _point_key(b)
+        points.setdefault(ka, a)
+        points.setdefault(kb, b)
+        adjacency.setdefault(ka, []).append((idx, kb))
+        adjacency.setdefault(kb, []).append((idx, ka))
+
+    used = set()
+    polylines = []
+
+    # Start open contours at degree-1 endpoints first, then handle loops.
+    starts = [k for k, links in adjacency.items() if len(links) == 1]
+    starts += [k for k in adjacency if k not in starts]
+
+    for start in starts:
+        available = [item for item in adjacency[start] if item[0] not in used]
+        while available:
+            line = [points[start]]
+            current = start
+            previous = None
+
+            while True:
+                choices = [
+                    item for item in adjacency[current]
+                    if item[0] not in used
+                ]
+                if not choices:
+                    break
+
+                # Prefer not to immediately reverse direction at junctions.
+                chosen = choices[0]
+                if previous is not None and len(choices) > 1:
+                    for item in choices:
+                        if item[1] != previous:
+                            chosen = item
+                            break
+
+                seg_idx, nxt = chosen
+                used.add(seg_idx)
+                line.append(points[nxt])
+                previous, current = current, nxt
+
+                if current == start:
+                    break
+
+            if len(line) >= 2:
+                polylines.append(line)
+
+            available = [item for item in adjacency[start] if item[0] not in used]
+
+    return polylines
+
+
+def chaikin_smooth(points, iterations=1):
+    """
+    Light contour smoothing. Endpoints are preserved for open lines.
+    Closed contours remain closed.
+    """
+    if len(points) < 4 or iterations <= 0:
+        return points
+
+    closed = _point_key(points[0]) == _point_key(points[-1])
+    pts = points[:]
+
+    for _ in range(iterations):
+        if len(pts) < 4:
+            break
+
+        out = []
+        if not closed:
+            out.append(pts[0])
+
+        pairs = list(zip(pts[:-1], pts[1:]))
+        for p, q in pairs:
+            q1 = (0.75*p[0] + 0.25*q[0], 0.75*p[1] + 0.25*q[1])
+            q2 = (0.25*p[0] + 0.75*q[0], 0.25*p[1] + 0.75*q[1])
+            out.extend([q1, q2])
+
+        if not closed:
+            out.append(pts[-1])
+        elif out:
+            out.append(out[0])
+
+        pts = out
+
+    return pts
+
 def contour_hover(level):
     if level < 0:
         return (
@@ -451,7 +600,8 @@ def build_placefile(stations):
         "; Derived from KSC WINDS 54-ft average winds.",
         "; Negative divergence = convergence (warm colors).",
         "; Positive divergence = divergence (cool colors).",
-        "; Contour units: 10^-4 s^-1.",
+        "; Contour interval: 1 x 10^-4 s^-1.",
+        "; Warm contours = convergence; cool contours = divergence; white = zero.",
         "; This is an objective-analysis visualization aid, not an official KSC/45 WS product.",
         f"; Stations used: {len(stations)}",
         f"; Latest source observation: {obs_summary}",
@@ -460,19 +610,30 @@ def build_placefile(stations):
     ]
 
     counts = {}
-    for level, color, width in CONTOURS:
-        segs = contour_segments(div, xs, ys, level)
-        counts[str(level)] = len(segs)
+    polyline_counts = {}
+
+    for level in CONTOUR_LEVELS:
+        raw_segments = contour_segments(div, xs, ys, level)
+        polylines = stitch_segments(raw_segments)
+        color, width = contour_style(level)
         r, g, b = color
         hover = contour_hover(level)
 
-        for (x1, y1), (x2, y2) in segs:
-            lat1, lon1 = xy_to_latlon(x1, y1, lat0, lon0, coslat)
-            lat2, lon2 = xy_to_latlon(x2, y2, lat0, lon0, coslat)
+        counts[str(level)] = len(raw_segments)
+        polyline_counts[str(level)] = len(polylines)
+
+        for poly in polylines:
+            # One light smoothing pass removes the blocky marching-squares
+            # appearance while retaining the analyzed pattern.
+            smooth = chaikin_smooth(poly, iterations=1)
+            if len(smooth) < 2:
+                continue
+
             lines.append(f"Color: {r} {g} {b}")
             lines.append(f'Line: {width}, 0, "{hover}"')
-            lines.append(f"{lat1:.7f}, {lon1:.7f}")
-            lines.append(f"{lat2:.7f}, {lon2:.7f}")
+            for x, y in smooth:
+                lat, lon = xy_to_latlon(x, y, lat0, lon0, coslat)
+                lines.append(f"{lat:.7f}, {lon:.7f}")
             lines.append("End:")
 
     valid_values = [
@@ -494,6 +655,7 @@ def build_placefile(stations):
         "min_divergence_x1e4_s-1": min(valid_values) if valid_values else None,
         "max_divergence_x1e4_s-1": max(valid_values) if valid_values else None,
         "contour_segment_counts": counts,
+        "contour_polyline_counts": polyline_counts,
         "status": "ok" if valid_values else "no_valid_gridpoints",
     }
 
