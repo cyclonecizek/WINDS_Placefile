@@ -52,6 +52,7 @@ jobs:
           BARNES_MAX_INFLUENCE_KM: "28"
           BARNES_NEAREST_STATION_KM: "12"
           BARNES_MIN_NEARBY_STATIONS: "3"
+          BARNES_HULL_BUFFER_KM: "12"
         run: python src/ksc_winds_barnes_divergence.py
 
       - name: Commit updated WINDS output
