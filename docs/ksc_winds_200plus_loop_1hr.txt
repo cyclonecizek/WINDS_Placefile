@@ -8,595 +8,654 @@ Font: 1, 13, 1, "Arial"
 ; Hover wind barb/text for full observation.
 ; 1-hour looping version using GRLevelX TimeRange.
 ; Loop ends on the newest source time that contains data for this product.
-; Frames available: 10
-; Latest valid frame: 2026-09-05 05:00Z
+; Frames available: 11
+; Latest valid frame: 2026-09-05 09:00Z
 
-; Frame 2026-09-05 04:15Z
-TimeRange: 2026-09-05T04:15:00 2026-09-05T04:20:00
+; Frame 2026-09-05 08:05Z
+TimeRange: 2026-09-05T08:05:00 2026-09-05T08:10:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 187, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 7 kt\nPeak Wind: 186 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 15 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 187, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 75.9 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 189 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 7 kt\nPeak Wind: 186 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 15 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 75.9 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 189 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 7 kt\nPeak Wind: 186 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 15 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 75.9 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 189 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 7 kt\nPeak Wind: 186 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 15 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "12", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 75.9 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 189 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 167, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 79.3 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 8 kt\nPeak Wind: 168 deg @ 9 kt\n10-min Peak: 164 deg @ 9 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 185, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.2 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 181 deg @ 12 kt\n10-min Peak: 185 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 79.3 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 8 kt\nPeak Wind: 168 deg @ 9 kt\n10-min Peak: 164 deg @ 9 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.2 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 181 deg @ 12 kt\n10-min Peak: 185 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 79.3 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 8 kt\nPeak Wind: 168 deg @ 9 kt\n10-min Peak: 164 deg @ 9 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.2 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 181 deg @ 12 kt\n10-min Peak: 185 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 79.3 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 8 kt\nPeak Wind: 168 deg @ 9 kt\n10-min Peak: 164 deg @ 9 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "12", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.2 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 181 deg @ 12 kt\n10-min Peak: 185 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 355, 1, 1, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 79.5 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 355 deg @ 1 kt\nPeak Wind: 348 deg @ 3 kt\n10-min Peak: 353 deg @ 4 kt\nDirection Deviation: 43 deg\nSensor side: NW\nUpwind side: NW"
+Icon: 0, 0, 175, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 3 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 154 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 79.5 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 355 deg @ 1 kt\nPeak Wind: 348 deg @ 3 kt\n10-min Peak: 353 deg @ 4 kt\nDirection Deviation: 43 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 3 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 154 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 79.5 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 355 deg @ 1 kt\nPeak Wind: 348 deg @ 3 kt\n10-min Peak: 353 deg @ 4 kt\nDirection Deviation: 43 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 3 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 154 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "3", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 79.5 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 355 deg @ 1 kt\nPeak Wind: 348 deg @ 3 kt\n10-min Peak: 353 deg @ 4 kt\nDirection Deviation: 43 deg\nSensor side: NW\nUpwind side: NW"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 3 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 154 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 75, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 76.9 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 75 deg @ 4 kt\nPeak Wind: 73 deg @ 4 kt\n10-min Peak: 55 deg @ 4 kt\nDirection Deviation: 20 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 162, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 5 kt\nPeak Wind: 163 deg @ 6 kt\n10-min Peak: 163 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 76.9 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 75 deg @ 4 kt\nPeak Wind: 73 deg @ 4 kt\n10-min Peak: 55 deg @ 4 kt\nDirection Deviation: 20 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 5 kt\nPeak Wind: 163 deg @ 6 kt\n10-min Peak: 163 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 76.9 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 75 deg @ 4 kt\nPeak Wind: 73 deg @ 4 kt\n10-min Peak: 55 deg @ 4 kt\nDirection Deviation: 20 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 5 kt\nPeak Wind: 163 deg @ 6 kt\n10-min Peak: 163 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "4", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 76.9 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 75 deg @ 4 kt\nPeak Wind: 73 deg @ 4 kt\n10-min Peak: 55 deg @ 4 kt\nDirection Deviation: 20 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 5 kt\nPeak Wind: 163 deg @ 6 kt\n10-min Peak: 163 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 82, 1, 1, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 90%\n\nWind height: 257 ft\nAverage Wind: 82 deg @ 2 kt\nPeak Wind: 90 deg @ 3 kt\n10-min Peak: 39 deg @ 4 kt\nDirection Deviation: 26 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 187, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 187 deg @ 8 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 183 deg @ 10 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 90%\n\nWind height: 257 ft\nAverage Wind: 82 deg @ 2 kt\nPeak Wind: 90 deg @ 3 kt\n10-min Peak: 39 deg @ 4 kt\nDirection Deviation: 26 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 187 deg @ 8 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 183 deg @ 10 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 90%\n\nWind height: 257 ft\nAverage Wind: 82 deg @ 2 kt\nPeak Wind: 90 deg @ 3 kt\n10-min Peak: 39 deg @ 4 kt\nDirection Deviation: 26 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 187 deg @ 8 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 183 deg @ 10 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "3", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 90%\n\nWind height: 257 ft\nAverage Wind: 82 deg @ 2 kt\nPeak Wind: 90 deg @ 3 kt\n10-min Peak: 39 deg @ 4 kt\nDirection Deviation: 26 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "9", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 187 deg @ 8 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 183 deg @ 10 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:15Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:05Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:20Z
-TimeRange: 2026-09-05T04:20:00 2026-09-05T04:25:00
+; Frame 2026-09-05 08:10Z
+TimeRange: 2026-09-05T08:10:00 2026-09-05T08:15:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 195, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.4 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 188, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 190 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.4 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 190 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.4 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 190 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.4 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 186 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "12", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 190 deg @ 12 kt\n10-min Peak: 189 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 167, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.2 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 9 kt\nPeak Wind: 165 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 185, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 186 deg @ 11 kt\n10-min Peak: 181 deg @ 12 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.2 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 9 kt\nPeak Wind: 165 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 186 deg @ 11 kt\n10-min Peak: 181 deg @ 12 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.2 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 9 kt\nPeak Wind: 165 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 186 deg @ 11 kt\n10-min Peak: 181 deg @ 12 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.2 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 9 kt\nPeak Wind: 165 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "11", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 185 deg @ 10 kt\nPeak Wind: 186 deg @ 11 kt\n10-min Peak: 181 deg @ 12 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 322 deg @ 1 kt\n10-min Peak: 348 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Icon: 0, 0, 180, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 3 kt\nPeak Wind: 209 deg @ 5 kt\n10-min Peak: 180 deg @ 5 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 322 deg @ 1 kt\n10-min Peak: 348 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 3 kt\nPeak Wind: 209 deg @ 5 kt\n10-min Peak: 180 deg @ 5 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 322 deg @ 1 kt\n10-min Peak: 348 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 3 kt\nPeak Wind: 209 deg @ 5 kt\n10-min Peak: 180 deg @ 5 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "1", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 322 deg @ 1 kt\n10-min Peak: 348 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 79.0 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 3 kt\nPeak Wind: 209 deg @ 5 kt\n10-min Peak: 180 deg @ 5 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 94, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 77.2 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 94 deg @ 4 kt\nPeak Wind: 101 deg @ 4 kt\n10-min Peak: 101 deg @ 4 kt\nDirection Deviation: 24 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 167, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 5 kt\nPeak Wind: 171 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 77.2 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 94 deg @ 4 kt\nPeak Wind: 101 deg @ 4 kt\n10-min Peak: 101 deg @ 4 kt\nDirection Deviation: 24 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 5 kt\nPeak Wind: 171 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 77.2 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 94 deg @ 4 kt\nPeak Wind: 101 deg @ 4 kt\n10-min Peak: 101 deg @ 4 kt\nDirection Deviation: 24 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 5 kt\nPeak Wind: 171 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "4", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 77.2 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 94 deg @ 4 kt\nPeak Wind: 101 deg @ 4 kt\n10-min Peak: 101 deg @ 4 kt\nDirection Deviation: 24 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 167 deg @ 5 kt\nPeak Wind: 171 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 79, 1, 1, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 79 deg @ 2 kt\nPeak Wind: 95 deg @ 3 kt\n10-min Peak: 90 deg @ 3 kt\nDirection Deviation: 28 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 189, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 189 deg @ 8 kt\nPeak Wind: 190 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 79 deg @ 2 kt\nPeak Wind: 95 deg @ 3 kt\n10-min Peak: 90 deg @ 3 kt\nDirection Deviation: 28 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 189 deg @ 8 kt\nPeak Wind: 190 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 79 deg @ 2 kt\nPeak Wind: 95 deg @ 3 kt\n10-min Peak: 90 deg @ 3 kt\nDirection Deviation: 28 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 189 deg @ 8 kt\nPeak Wind: 190 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "3", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 77.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 79 deg @ 2 kt\nPeak Wind: 95 deg @ 3 kt\n10-min Peak: 90 deg @ 3 kt\nDirection Deviation: 28 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "9", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 87%\n\nWind height: 257 ft\nAverage Wind: 189 deg @ 8 kt\nPeak Wind: 190 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:20Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:10Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:25Z
-TimeRange: 2026-09-05T04:25:00 2026-09-05T04:30:00
+; Frame 2026-09-05 08:15Z
+TimeRange: 2026-09-05T08:15:00 2026-09-05T08:20:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 193, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.5 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 187, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 185 deg @ 12 kt\n10-min Peak: 190 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.5 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 185 deg @ 12 kt\n10-min Peak: 190 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.5 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 185 deg @ 12 kt\n10-min Peak: 190 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.5 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "12", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 76.3 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 11 kt\nPeak Wind: 185 deg @ 12 kt\n10-min Peak: 190 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 173, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.5 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 173 deg @ 8 kt\nPeak Wind: 170 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 184, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 9 kt\nPeak Wind: 186 deg @ 10 kt\n10-min Peak: 186 deg @ 11 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.5 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 173 deg @ 8 kt\nPeak Wind: 170 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 9 kt\nPeak Wind: 186 deg @ 10 kt\n10-min Peak: 186 deg @ 11 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.5 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 173 deg @ 8 kt\nPeak Wind: 170 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 9 kt\nPeak Wind: 186 deg @ 10 kt\n10-min Peak: 186 deg @ 11 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 79.5 F\nRelative Humidity: 94%\n\nWind height: 204 ft\nAverage Wind: 173 deg @ 8 kt\nPeak Wind: 170 deg @ 9 kt\n10-min Peak: 165 deg @ 9 kt\nDirection Deviation: 11 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "10", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 9 kt\nPeak Wind: 186 deg @ 10 kt\n10-min Peak: 186 deg @ 11 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 343, 1, 1, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 343 deg @ 1 kt\nPeak Wind: 349 deg @ 2 kt\n10-min Peak: 349 deg @ 2 kt\nDirection Deviation: 37 deg\nSensor side: NW\nUpwind side: NW"
+Icon: 0, 0, 193, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 78.8 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 3 kt\nPeak Wind: 197 deg @ 5 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 343 deg @ 1 kt\nPeak Wind: 349 deg @ 2 kt\n10-min Peak: 349 deg @ 2 kt\nDirection Deviation: 37 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 78.8 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 3 kt\nPeak Wind: 197 deg @ 5 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 343 deg @ 1 kt\nPeak Wind: 349 deg @ 2 kt\n10-min Peak: 349 deg @ 2 kt\nDirection Deviation: 37 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 78.8 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 3 kt\nPeak Wind: 197 deg @ 5 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "2", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 343 deg @ 1 kt\nPeak Wind: 349 deg @ 2 kt\n10-min Peak: 349 deg @ 2 kt\nDirection Deviation: 37 deg\nSensor side: NW\nUpwind side: NW"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 78.8 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 3 kt\nPeak Wind: 197 deg @ 5 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 110, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 110 deg @ 4 kt\nPeak Wind: 111 deg @ 5 kt\n10-min Peak: 111 deg @ 5 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 176, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 5 kt\nPeak Wind: 174 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 110 deg @ 4 kt\nPeak Wind: 111 deg @ 5 kt\n10-min Peak: 111 deg @ 5 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 5 kt\nPeak Wind: 174 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 110 deg @ 4 kt\nPeak Wind: 111 deg @ 5 kt\n10-min Peak: 111 deg @ 5 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 5 kt\nPeak Wind: 174 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "5", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 77.1 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 110 deg @ 4 kt\nPeak Wind: 111 deg @ 5 kt\n10-min Peak: 111 deg @ 5 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.1 F\nDew Point: 76.8 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 5 kt\nPeak Wind: 174 deg @ 6 kt\n10-min Peak: 171 deg @ 6 kt\nDirection Deviation: 7 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 125, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 125 deg @ 3 kt\nPeak Wind: 141 deg @ 6 kt\n10-min Peak: 141 deg @ 6 kt\nDirection Deviation: 38 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 192, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 82.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 192 deg @ 8 kt\nPeak Wind: 194 deg @ 9 kt\n10-min Peak: 190 deg @ 9 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 125 deg @ 3 kt\nPeak Wind: 141 deg @ 6 kt\n10-min Peak: 141 deg @ 6 kt\nDirection Deviation: 38 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "82", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 82.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 192 deg @ 8 kt\nPeak Wind: 194 deg @ 9 kt\n10-min Peak: 190 deg @ 9 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 125 deg @ 3 kt\nPeak Wind: 141 deg @ 6 kt\n10-min Peak: 141 deg @ 6 kt\nDirection Deviation: 38 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 82.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 192 deg @ 8 kt\nPeak Wind: 194 deg @ 9 kt\n10-min Peak: 190 deg @ 9 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "6", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 80.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 125 deg @ 3 kt\nPeak Wind: 141 deg @ 6 kt\n10-min Peak: 141 deg @ 6 kt\nDirection Deviation: 38 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "9", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 82.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 192 deg @ 8 kt\nPeak Wind: 194 deg @ 9 kt\n10-min Peak: 190 deg @ 9 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:25Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:15Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:30Z
-TimeRange: 2026-09-05T04:30:00 2026-09-05T04:35:00
+; Frame 2026-09-05 08:20Z
+TimeRange: 2026-09-05T08:20:00 2026-09-05T08:30:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 187, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 6 kt\nPeak Wind: 189 deg @ 7 kt\n10-min Peak: 197 deg @ 8 kt\nDirection Deviation: 6 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 188, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 75.8 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 188 deg @ 12 kt\n10-min Peak: 188 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 6 kt\nPeak Wind: 189 deg @ 7 kt\n10-min Peak: 197 deg @ 8 kt\nDirection Deviation: 6 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 75.8 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 188 deg @ 12 kt\n10-min Peak: 188 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 6 kt\nPeak Wind: 189 deg @ 7 kt\n10-min Peak: 197 deg @ 8 kt\nDirection Deviation: 6 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 75.8 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 188 deg @ 12 kt\n10-min Peak: 188 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 78.8 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 6 kt\nPeak Wind: 189 deg @ 7 kt\n10-min Peak: 197 deg @ 8 kt\nDirection Deviation: 6 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "12", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 75.8 F\nRelative Humidity: 83%\n\nWind height: 204 ft\nAverage Wind: 188 deg @ 11 kt\nPeak Wind: 188 deg @ 12 kt\n10-min Peak: 188 deg @ 12 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 171, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 78.8 F\nRelative Humidity: 95%\n\nWind height: 204 ft\nAverage Wind: 171 deg @ 5 kt\nPeak Wind: 170 deg @ 7 kt\n10-min Peak: 170 deg @ 9 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 184, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 8 kt\nPeak Wind: 184 deg @ 9 kt\n10-min Peak: 186 deg @ 10 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 78.8 F\nRelative Humidity: 95%\n\nWind height: 204 ft\nAverage Wind: 171 deg @ 5 kt\nPeak Wind: 170 deg @ 7 kt\n10-min Peak: 170 deg @ 9 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 8 kt\nPeak Wind: 184 deg @ 9 kt\n10-min Peak: 186 deg @ 10 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 78.8 F\nRelative Humidity: 95%\n\nWind height: 204 ft\nAverage Wind: 171 deg @ 5 kt\nPeak Wind: 170 deg @ 7 kt\n10-min Peak: 170 deg @ 9 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 8 kt\nPeak Wind: 184 deg @ 9 kt\n10-min Peak: 186 deg @ 10 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.4 F\nDew Point: 78.8 F\nRelative Humidity: 95%\n\nWind height: 204 ft\nAverage Wind: 171 deg @ 5 kt\nPeak Wind: 170 deg @ 7 kt\n10-min Peak: 170 deg @ 9 kt\nDirection Deviation: 9 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "9", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 8 kt\nPeak Wind: 184 deg @ 9 kt\n10-min Peak: 186 deg @ 10 kt\nDirection Deviation: 2 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 344, 1, 1, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 344 deg @ 1 kt\nPeak Wind: 351 deg @ 3 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 35 deg\nSensor side: NW\nUpwind side: NW"
+Icon: 0, 0, 181, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 3 kt\nPeak Wind: 185 deg @ 4 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 344 deg @ 1 kt\nPeak Wind: 351 deg @ 3 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 35 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 3 kt\nPeak Wind: 185 deg @ 4 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 344 deg @ 1 kt\nPeak Wind: 351 deg @ 3 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 35 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 3 kt\nPeak Wind: 185 deg @ 4 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "3", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 344 deg @ 1 kt\nPeak Wind: 351 deg @ 3 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 35 deg\nSensor side: NW\nUpwind side: NW"
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 3 kt\nPeak Wind: 185 deg @ 4 kt\n10-min Peak: 197 deg @ 5 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 122, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 76.8 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 122 deg @ 5 kt\nPeak Wind: 128 deg @ 6 kt\n10-min Peak: 128 deg @ 6 kt\nDirection Deviation: 27 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 180, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 76.7 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 5 kt\nPeak Wind: 187 deg @ 6 kt\n10-min Peak: 174 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 76.8 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 122 deg @ 5 kt\nPeak Wind: 128 deg @ 6 kt\n10-min Peak: 128 deg @ 6 kt\nDirection Deviation: 27 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 76.7 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 5 kt\nPeak Wind: 187 deg @ 6 kt\n10-min Peak: 174 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 76.8 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 122 deg @ 5 kt\nPeak Wind: 128 deg @ 6 kt\n10-min Peak: 128 deg @ 6 kt\nDirection Deviation: 27 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 76.7 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 5 kt\nPeak Wind: 187 deg @ 6 kt\n10-min Peak: 174 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 76.8 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 122 deg @ 5 kt\nPeak Wind: 128 deg @ 6 kt\n10-min Peak: 128 deg @ 6 kt\nDirection Deviation: 27 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 76.7 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 180 deg @ 5 kt\nPeak Wind: 187 deg @ 6 kt\n10-min Peak: 174 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 148, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 148 deg @ 6 kt\nPeak Wind: 156 deg @ 9 kt\n10-min Peak: 156 deg @ 9 kt\nDirection Deviation: 43 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 194, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 194 deg @ 8 kt\nPeak Wind: 195 deg @ 9 kt\n10-min Peak: 194 deg @ 9 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 148 deg @ 6 kt\nPeak Wind: 156 deg @ 9 kt\n10-min Peak: 156 deg @ 9 kt\nDirection Deviation: 43 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 194 deg @ 8 kt\nPeak Wind: 195 deg @ 9 kt\n10-min Peak: 194 deg @ 9 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 148 deg @ 6 kt\nPeak Wind: 156 deg @ 9 kt\n10-min Peak: 156 deg @ 9 kt\nDirection Deviation: 43 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 194 deg @ 8 kt\nPeak Wind: 195 deg @ 9 kt\n10-min Peak: 194 deg @ 9 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 148 deg @ 6 kt\nPeak Wind: 156 deg @ 9 kt\n10-min Peak: 156 deg @ 9 kt\nDirection Deviation: 43 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "9", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 194 deg @ 8 kt\nPeak Wind: 195 deg @ 9 kt\n10-min Peak: 194 deg @ 9 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:30Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:20Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:35Z
-TimeRange: 2026-09-05T04:35:00 2026-09-05T04:40:00
+; Frame 2026-09-05 08:30Z
+TimeRange: 2026-09-05T08:30:00 2026-09-05T08:35:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 192, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.7 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 6 kt\nPeak Wind: 193 deg @ 6 kt\n10-min Peak: 189 deg @ 7 kt\nDirection Deviation: 5 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 193, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 10 kt\nPeak Wind: 197 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.7 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 6 kt\nPeak Wind: 193 deg @ 6 kt\n10-min Peak: 189 deg @ 7 kt\nDirection Deviation: 5 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 10 kt\nPeak Wind: 197 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.7 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 6 kt\nPeak Wind: 193 deg @ 6 kt\n10-min Peak: 189 deg @ 7 kt\nDirection Deviation: 5 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 10 kt\nPeak Wind: 197 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "6", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.6 F\nDew Point: 78.7 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 6 kt\nPeak Wind: 193 deg @ 6 kt\n10-min Peak: 189 deg @ 7 kt\nDirection Deviation: 5 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "13", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 10 kt\nPeak Wind: 197 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 190, 1, 1, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 79.3 F\nRelative Humidity: 98%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 2 kt\nPeak Wind: 169 deg @ 5 kt\n10-min Peak: 170 deg @ 7 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 196, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.2 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 3 kt\nPeak Wind: 207 deg @ 4 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 79.3 F\nRelative Humidity: 98%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 2 kt\nPeak Wind: 169 deg @ 5 kt\n10-min Peak: 170 deg @ 7 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.2 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 3 kt\nPeak Wind: 207 deg @ 4 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 79.3 F\nRelative Humidity: 98%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 2 kt\nPeak Wind: 169 deg @ 5 kt\n10-min Peak: 170 deg @ 7 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.2 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 3 kt\nPeak Wind: 207 deg @ 4 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "5", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 79.3 F\nRelative Humidity: 98%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 2 kt\nPeak Wind: 169 deg @ 5 kt\n10-min Peak: 170 deg @ 7 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.2 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 3 kt\nPeak Wind: 207 deg @ 4 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 122 deg @ 1 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Icon: 0, 0, 177, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 177 deg @ 4 kt\nPeak Wind: 182 deg @ 6 kt\n10-min Peak: 182 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 122 deg @ 1 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 177 deg @ 4 kt\nPeak Wind: 182 deg @ 6 kt\n10-min Peak: 182 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 122 deg @ 1 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 177 deg @ 4 kt\nPeak Wind: 182 deg @ 6 kt\n10-min Peak: 182 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "1", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.7 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 122 deg @ 1 kt\n10-min Peak: 351 deg @ 3 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: NW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 177 deg @ 4 kt\nPeak Wind: 182 deg @ 6 kt\n10-min Peak: 182 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 133, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.9 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 6 kt\nPeak Wind: 136 deg @ 7 kt\n10-min Peak: 136 deg @ 7 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 176, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 4 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 176 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.9 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 6 kt\nPeak Wind: 136 deg @ 7 kt\n10-min Peak: 136 deg @ 7 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 4 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 176 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.9 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 6 kt\nPeak Wind: 136 deg @ 7 kt\n10-min Peak: 136 deg @ 7 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 4 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 176 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.9 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 6 kt\nPeak Wind: 136 deg @ 7 kt\n10-min Peak: 136 deg @ 7 kt\nDirection Deviation: 26 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 176 deg @ 4 kt\nPeak Wind: 180 deg @ 5 kt\n10-min Peak: 176 deg @ 6 kt\nDirection Deviation: 8 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 154, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 154 deg @ 8 kt\nPeak Wind: 157 deg @ 9 kt\n10-min Peak: 157 deg @ 9 kt\nDirection Deviation: 41 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 197, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 197 deg @ 7 kt\nPeak Wind: 196 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 154 deg @ 8 kt\nPeak Wind: 157 deg @ 9 kt\n10-min Peak: 157 deg @ 9 kt\nDirection Deviation: 41 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 197 deg @ 7 kt\nPeak Wind: 196 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 154 deg @ 8 kt\nPeak Wind: 157 deg @ 9 kt\n10-min Peak: 157 deg @ 9 kt\nDirection Deviation: 41 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 197 deg @ 7 kt\nPeak Wind: 196 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 154 deg @ 8 kt\nPeak Wind: 157 deg @ 9 kt\n10-min Peak: 157 deg @ 9 kt\nDirection Deviation: 41 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 197 deg @ 7 kt\nPeak Wind: 196 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:35Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:30Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:40Z
-TimeRange: 2026-09-05T04:40:00 2026-09-05T04:45:00
+; Frame 2026-09-05 08:35Z
+TimeRange: 2026-09-05T08:35:00 2026-09-05T08:40:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 209, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 79.1 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 209 deg @ 6 kt\nPeak Wind: 213 deg @ 7 kt\n10-min Peak: 213 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 192, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 12 kt\nPeak Wind: 188 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 79.1 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 209 deg @ 6 kt\nPeak Wind: 213 deg @ 7 kt\n10-min Peak: 213 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 12 kt\nPeak Wind: 188 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 79.1 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 209 deg @ 6 kt\nPeak Wind: 213 deg @ 7 kt\n10-min Peak: 213 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 12 kt\nPeak Wind: 188 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.0 F\nDew Point: 79.1 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 209 deg @ 6 kt\nPeak Wind: 213 deg @ 7 kt\n10-min Peak: 213 deg @ 7 kt\nDirection Deviation: 8 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "13", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 192 deg @ 12 kt\nPeak Wind: 188 deg @ 13 kt\n10-min Peak: 197 deg @ 13 kt\nDirection Deviation: 3 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 186, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 186 deg @ 6 kt\nPeak Wind: 183 deg @ 7 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 205, 1, 1, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.5 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 205 deg @ 2 kt\nPeak Wind: 237 deg @ 4 kt\n10-min Peak: 207 deg @ 4 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 186 deg @ 6 kt\nPeak Wind: 183 deg @ 7 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.5 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 205 deg @ 2 kt\nPeak Wind: 237 deg @ 4 kt\n10-min Peak: 207 deg @ 4 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 186 deg @ 6 kt\nPeak Wind: 183 deg @ 7 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "78", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.5 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 205 deg @ 2 kt\nPeak Wind: 237 deg @ 4 kt\n10-min Peak: 207 deg @ 4 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 186 deg @ 6 kt\nPeak Wind: 183 deg @ 7 kt\n10-min Peak: 183 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.7 F\nDew Point: 77.5 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 205 deg @ 2 kt\nPeak Wind: 237 deg @ 4 kt\n10-min Peak: 207 deg @ 4 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 146, 1, 1, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 146 deg @ 2 kt\nPeak Wind: 176 deg @ 3 kt\n10-min Peak: 176 deg @ 3 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 175, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 5 kt\nPeak Wind: 173 deg @ 6 kt\n10-min Peak: 173 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 146 deg @ 2 kt\nPeak Wind: 176 deg @ 3 kt\n10-min Peak: 176 deg @ 3 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 5 kt\nPeak Wind: 173 deg @ 6 kt\n10-min Peak: 173 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 146 deg @ 2 kt\nPeak Wind: 176 deg @ 3 kt\n10-min Peak: 176 deg @ 3 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 5 kt\nPeak Wind: 173 deg @ 6 kt\n10-min Peak: 173 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "3", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 146 deg @ 2 kt\nPeak Wind: 176 deg @ 3 kt\n10-min Peak: 176 deg @ 3 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 5 kt\nPeak Wind: 173 deg @ 6 kt\n10-min Peak: 173 deg @ 6 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 133, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.2 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 7 kt\nPeak Wind: 134 deg @ 7 kt\n10-min Peak: 134 deg @ 7 kt\nDirection Deviation: 21 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 175, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 4 kt\nPeak Wind: 170 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.2 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 7 kt\nPeak Wind: 134 deg @ 7 kt\n10-min Peak: 134 deg @ 7 kt\nDirection Deviation: 21 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 4 kt\nPeak Wind: 170 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.2 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 7 kt\nPeak Wind: 134 deg @ 7 kt\n10-min Peak: 134 deg @ 7 kt\nDirection Deviation: 21 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 4 kt\nPeak Wind: 170 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 77.2 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 133 deg @ 7 kt\nPeak Wind: 134 deg @ 7 kt\n10-min Peak: 134 deg @ 7 kt\nDirection Deviation: 21 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.9 F\nDew Point: 76.6 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 175 deg @ 4 kt\nPeak Wind: 170 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 6 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 160, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 160 deg @ 9 kt\nPeak Wind: 165 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 35 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 200, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 200 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 160 deg @ 9 kt\nPeak Wind: 165 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 35 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 200 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 160 deg @ 9 kt\nPeak Wind: 165 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 35 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 200 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "10", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 160 deg @ 9 kt\nPeak Wind: 165 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 35 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 200 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 196 deg @ 8 kt\nDirection Deviation: 4 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:40Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:35Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:45Z
-TimeRange: 2026-09-05T04:45:00 2026-09-05T04:50:00
+; Frame 2026-09-05 08:40Z
+TimeRange: 2026-09-05T08:40:00 2026-09-05T08:45:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 212, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 212 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 193, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 12 kt\nPeak Wind: 194 deg @ 13 kt\n10-min Peak: 188 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 212 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 12 kt\nPeak Wind: 194 deg @ 13 kt\n10-min Peak: 188 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 212 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 12 kt\nPeak Wind: 194 deg @ 13 kt\n10-min Peak: 188 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 212 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "13", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.1 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 193 deg @ 12 kt\nPeak Wind: 194 deg @ 13 kt\n10-min Peak: 188 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 196, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.4 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 5 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 203 deg @ 7 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 201, 1, 1, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 77.4 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 2 kt\nPeak Wind: 193 deg @ 4 kt\n10-min Peak: 237 deg @ 4 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.4 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 5 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 203 deg @ 7 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 77.4 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 2 kt\nPeak Wind: 193 deg @ 4 kt\n10-min Peak: 237 deg @ 4 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.4 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 5 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 203 deg @ 7 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 77.4 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 2 kt\nPeak Wind: 193 deg @ 4 kt\n10-min Peak: 237 deg @ 4 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.6 F\nDew Point: 79.4 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 5 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 203 deg @ 7 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 79.9 F\nDew Point: 77.4 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 2 kt\nPeak Wind: 193 deg @ 4 kt\n10-min Peak: 237 deg @ 4 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 149, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 149 deg @ 4 kt\nPeak Wind: 161 deg @ 5 kt\n10-min Peak: 161 deg @ 5 kt\nDirection Deviation: 77 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 169, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.4 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 169 deg @ 6 kt\nPeak Wind: 184 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 149 deg @ 4 kt\nPeak Wind: 161 deg @ 5 kt\n10-min Peak: 161 deg @ 5 kt\nDirection Deviation: 77 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.4 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 169 deg @ 6 kt\nPeak Wind: 184 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 149 deg @ 4 kt\nPeak Wind: 161 deg @ 5 kt\n10-min Peak: 161 deg @ 5 kt\nDirection Deviation: 77 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "78", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.4 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 169 deg @ 6 kt\nPeak Wind: 184 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "5", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.7 F\nDew Point: 79.8 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 149 deg @ 4 kt\nPeak Wind: 161 deg @ 5 kt\n10-min Peak: 161 deg @ 5 kt\nDirection Deviation: 77 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "8", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.4 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 169 deg @ 6 kt\nPeak Wind: 184 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 13 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 130, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 130 deg @ 7 kt\nPeak Wind: 132 deg @ 8 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 183, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 183 deg @ 5 kt\nPeak Wind: 181 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 130 deg @ 7 kt\nPeak Wind: 132 deg @ 8 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 183 deg @ 5 kt\nPeak Wind: 181 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 130 deg @ 7 kt\nPeak Wind: 132 deg @ 8 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 183 deg @ 5 kt\nPeak Wind: 181 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.0 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 130 deg @ 7 kt\nPeak Wind: 132 deg @ 8 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 183 deg @ 5 kt\nPeak Wind: 181 deg @ 6 kt\n10-min Peak: 170 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 163, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 163 deg @ 9 kt\nPeak Wind: 164 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 31 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 199, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 163 deg @ 9 kt\nPeak Wind: 164 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 31 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 163 deg @ 9 kt\nPeak Wind: 164 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 31 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "10", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 163 deg @ 9 kt\nPeak Wind: 164 deg @ 10 kt\n10-min Peak: 165 deg @ 10 kt\nDirection Deviation: 31 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 202 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:45Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:40Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:50Z
-TimeRange: 2026-09-05T04:50:00 2026-09-05T04:55:00
+; Frame 2026-09-05 08:45Z
+TimeRange: 2026-09-05T08:45:00 2026-09-05T08:50:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 207, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 207 deg @ 7 kt\nPeak Wind: 210 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 196, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 11 kt\nPeak Wind: 196 deg @ 13 kt\n10-min Peak: 194 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 207 deg @ 7 kt\nPeak Wind: 210 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 11 kt\nPeak Wind: 196 deg @ 13 kt\n10-min Peak: 194 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "79", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 207 deg @ 7 kt\nPeak Wind: 210 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 11 kt\nPeak Wind: 196 deg @ 13 kt\n10-min Peak: 194 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.6 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 207 deg @ 7 kt\nPeak Wind: 210 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 10 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "13", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 196 deg @ 11 kt\nPeak Wind: 196 deg @ 13 kt\n10-min Peak: 194 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 200, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 200 deg @ 5 kt\nPeak Wind: 194 deg @ 7 kt\n10-min Peak: 194 deg @ 7 kt\nDirection Deviation: 17 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 201, 1, 1, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.1 F\nDew Point: 77.2 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 1 kt\nPeak Wind: 229 deg @ 3 kt\n10-min Peak: 193 deg @ 4 kt\nDirection Deviation: 25 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 200 deg @ 5 kt\nPeak Wind: 194 deg @ 7 kt\n10-min Peak: 194 deg @ 7 kt\nDirection Deviation: 17 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.1 F\nDew Point: 77.2 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 1 kt\nPeak Wind: 229 deg @ 3 kt\n10-min Peak: 193 deg @ 4 kt\nDirection Deviation: 25 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 200 deg @ 5 kt\nPeak Wind: 194 deg @ 7 kt\n10-min Peak: 194 deg @ 7 kt\nDirection Deviation: 17 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.1 F\nDew Point: 77.2 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 1 kt\nPeak Wind: 229 deg @ 3 kt\n10-min Peak: 193 deg @ 4 kt\nDirection Deviation: 25 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 200 deg @ 5 kt\nPeak Wind: 194 deg @ 7 kt\n10-min Peak: 194 deg @ 7 kt\nDirection Deviation: 17 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "3", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.1 F\nDew Point: 77.2 F\nRelative Humidity: 91%\n\nWind height: 204 ft\nAverage Wind: 201 deg @ 1 kt\nPeak Wind: 229 deg @ 3 kt\n10-min Peak: 193 deg @ 4 kt\nDirection Deviation: 25 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 157, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.8 F\nDew Point: 79.9 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 157 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 155, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 4 kt\nPeak Wind: 162 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.8 F\nDew Point: 79.9 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 157 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 4 kt\nPeak Wind: 162 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.8 F\nDew Point: 79.9 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 157 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 4 kt\nPeak Wind: 162 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.8 F\nDew Point: 79.9 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 157 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 62 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "8", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 4 kt\nPeak Wind: 162 deg @ 8 kt\n10-min Peak: 184 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 140, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.4 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 140 deg @ 6 kt\nPeak Wind: 145 deg @ 7 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 11 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 182, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 5 kt\nPeak Wind: 185 deg @ 6 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.4 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 140 deg @ 6 kt\nPeak Wind: 145 deg @ 7 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 11 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 5 kt\nPeak Wind: 185 deg @ 6 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.4 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 140 deg @ 6 kt\nPeak Wind: 145 deg @ 7 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 11 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 5 kt\nPeak Wind: 185 deg @ 6 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.4 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 140 deg @ 6 kt\nPeak Wind: 145 deg @ 7 kt\n10-min Peak: 132 deg @ 8 kt\nDirection Deviation: 11 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.5 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 5 kt\nPeak Wind: 185 deg @ 6 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 169, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 169 deg @ 9 kt\nPeak Wind: 171 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 18 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 195, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 194 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 169 deg @ 9 kt\nPeak Wind: 171 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 18 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 194 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 169 deg @ 9 kt\nPeak Wind: 171 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 18 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 194 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "10", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 91%\n\nWind height: 257 ft\nAverage Wind: 169 deg @ 9 kt\nPeak Wind: 171 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 18 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 195 deg @ 7 kt\nPeak Wind: 194 deg @ 8 kt\n10-min Peak: 202 deg @ 8 kt\nDirection Deviation: 3 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:50Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:45Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 04:55Z
-TimeRange: 2026-09-05T04:55:00 2026-09-05T05:00:00
+; Frame 2026-09-05 08:50Z
+TimeRange: 2026-09-05T08:50:00 2026-09-05T08:55:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 203, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.4 F\nDew Point: 78.5 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 203 deg @ 7 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 210 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 199, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 199 deg @ 10 kt\nPeak Wind: 199 deg @ 12 kt\n10-min Peak: 196 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.4 F\nDew Point: 78.5 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 203 deg @ 7 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 210 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 199 deg @ 10 kt\nPeak Wind: 199 deg @ 12 kt\n10-min Peak: 196 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.4 F\nDew Point: 78.5 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 203 deg @ 7 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 210 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 199 deg @ 10 kt\nPeak Wind: 199 deg @ 12 kt\n10-min Peak: 196 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "7", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.4 F\nDew Point: 78.5 F\nRelative Humidity: 88%\n\nWind height: 204 ft\nAverage Wind: 203 deg @ 7 kt\nPeak Wind: 203 deg @ 7 kt\n10-min Peak: 210 deg @ 8 kt\nDirection Deviation: 9 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "12", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.4 F\nDew Point: 76.5 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 199 deg @ 10 kt\nPeak Wind: 199 deg @ 12 kt\n10-min Peak: 196 deg @ 13 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 189, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 189 deg @ 6 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 163, 1, 1, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 163 deg @ 1 kt\nPeak Wind: 168 deg @ 4 kt\n10-min Peak: 168 deg @ 4 kt\nDirection Deviation: 29 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 189 deg @ 6 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 163 deg @ 1 kt\nPeak Wind: 168 deg @ 4 kt\n10-min Peak: 168 deg @ 4 kt\nDirection Deviation: 29 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 189 deg @ 6 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 163 deg @ 1 kt\nPeak Wind: 168 deg @ 4 kt\n10-min Peak: 168 deg @ 4 kt\nDirection Deviation: 29 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.5 F\nDew Point: 79.6 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 189 deg @ 6 kt\nPeak Wind: 185 deg @ 9 kt\n10-min Peak: 185 deg @ 9 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 163 deg @ 1 kt\nPeak Wind: 168 deg @ 4 kt\n10-min Peak: 168 deg @ 4 kt\nDirection Deviation: 29 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 151, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 151 deg @ 7 kt\nPeak Wind: 150 deg @ 8 kt\n10-min Peak: 150 deg @ 8 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 147, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 147 deg @ 5 kt\nPeak Wind: 156 deg @ 5 kt\n10-min Peak: 162 deg @ 8 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 151 deg @ 7 kt\nPeak Wind: 150 deg @ 8 kt\n10-min Peak: 150 deg @ 8 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 147 deg @ 5 kt\nPeak Wind: 156 deg @ 5 kt\n10-min Peak: 162 deg @ 8 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 151 deg @ 7 kt\nPeak Wind: 150 deg @ 8 kt\n10-min Peak: 150 deg @ 8 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 147 deg @ 5 kt\nPeak Wind: 156 deg @ 5 kt\n10-min Peak: 162 deg @ 8 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 151 deg @ 7 kt\nPeak Wind: 150 deg @ 8 kt\n10-min Peak: 150 deg @ 8 kt\nDirection Deviation: 47 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.9 F\nRelative Humidity: 93%\n\nWind height: 204 ft\nAverage Wind: 147 deg @ 5 kt\nPeak Wind: 156 deg @ 5 kt\n10-min Peak: 162 deg @ 8 kt\nDirection Deviation: 16 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 158, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 77.8 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 158 deg @ 5 kt\nPeak Wind: 156 deg @ 6 kt\n10-min Peak: 145 deg @ 7 kt\nDirection Deviation: 12 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 182, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 4 kt\nPeak Wind: 182 deg @ 5 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 77.8 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 158 deg @ 5 kt\nPeak Wind: 156 deg @ 6 kt\n10-min Peak: 145 deg @ 7 kt\nDirection Deviation: 12 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 4 kt\nPeak Wind: 182 deg @ 5 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 77.8 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 158 deg @ 5 kt\nPeak Wind: 156 deg @ 6 kt\n10-min Peak: 145 deg @ 7 kt\nDirection Deviation: 12 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 4 kt\nPeak Wind: 182 deg @ 5 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.0 F\nDew Point: 77.8 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 158 deg @ 5 kt\nPeak Wind: 156 deg @ 6 kt\n10-min Peak: 145 deg @ 7 kt\nDirection Deviation: 12 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 182 deg @ 4 kt\nPeak Wind: 182 deg @ 5 kt\n10-min Peak: 185 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 172, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 172 deg @ 9 kt\nPeak Wind: 175 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 8 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 196, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 196 deg @ 7 kt\nPeak Wind: 195 deg @ 8 kt\n10-min Peak: 194 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 172 deg @ 9 kt\nPeak Wind: 175 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 8 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 196 deg @ 7 kt\nPeak Wind: 195 deg @ 8 kt\n10-min Peak: 194 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 172 deg @ 9 kt\nPeak Wind: 175 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 8 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 196 deg @ 7 kt\nPeak Wind: 195 deg @ 8 kt\n10-min Peak: 194 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "10", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 92%\n\nWind height: 257 ft\nAverage Wind: 172 deg @ 9 kt\nPeak Wind: 175 deg @ 10 kt\n10-min Peak: 171 deg @ 10 kt\nDirection Deviation: 8 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 196 deg @ 7 kt\nPeak Wind: 195 deg @ 8 kt\n10-min Peak: 194 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 04:55Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:50Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
 
-; Frame 2026-09-05 05:00Z
-TimeRange: 2026-09-05T05:00:00 2026-09-05T05:05:00
+; Frame 2026-09-05 08:55Z
+TimeRange: 2026-09-05T08:55:00 2026-09-05T09:00:00
 Object: 28.44425806, -80.56205269
 Color: 255 255 255
-Icon: 0, 0, 210, 1, 2, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.2 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 210 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 7 deg\nSensor side: SE\nUpwind side: SE"
+Icon: 0, 0, 197, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 197 deg @ 9 kt\nPeak Wind: 195 deg @ 11 kt\n10-min Peak: 199 deg @ 12 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.2 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 210 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 7 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 197 deg @ 9 kt\nPeak Wind: 195 deg @ 11 kt\n10-min Peak: 199 deg @ 12 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.2 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 210 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 7 deg\nSensor side: SE\nUpwind side: SE"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 197 deg @ 9 kt\nPeak Wind: 195 deg @ 11 kt\n10-min Peak: 199 deg @ 12 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 82.5 F\nDew Point: 78.2 F\nRelative Humidity: 87%\n\nWind height: 204 ft\nAverage Wind: 210 deg @ 7 kt\nPeak Wind: 213 deg @ 8 kt\n10-min Peak: 213 deg @ 8 kt\nDirection Deviation: 7 deg\nSensor side: SE\nUpwind side: SE"
+Text: 31, -10, 1, "11", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 197 deg @ 9 kt\nPeak Wind: 195 deg @ 11 kt\n10-min Peak: 199 deg @ 12 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
 End:
 Object: 28.51298142, -80.56130344
 Color: 255 255 255
-Icon: 0, 0, 181, 1, 3, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 79.9 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 8 kt\nPeak Wind: 188 deg @ 9 kt\n10-min Peak: 188 deg @ 9 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 166, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 166 deg @ 3 kt\nPeak Wind: 176 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 79.9 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 8 kt\nPeak Wind: 188 deg @ 9 kt\n10-min Peak: 188 deg @ 9 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 166 deg @ 3 kt\nPeak Wind: 176 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 79.9 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 8 kt\nPeak Wind: 188 deg @ 9 kt\n10-min Peak: 188 deg @ 9 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 166 deg @ 3 kt\nPeak Wind: 176 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 79.9 F\nRelative Humidity: 96%\n\nWind height: 204 ft\nAverage Wind: 181 deg @ 8 kt\nPeak Wind: 188 deg @ 9 kt\n10-min Peak: 188 deg @ 9 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 77.1 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 166 deg @ 3 kt\nPeak Wind: 176 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.56971917, -80.58641417
 Color: 255 255 255
-Icon: 0, 0, 155, 1, 3, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 8 kt\nPeak Wind: 153 deg @ 9 kt\n10-min Peak: 153 deg @ 9 kt\nDirection Deviation: 28 deg\nSensor side: NW\nUpwind side: SE"
+Icon: 0, 0, 155, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 8 kt\nPeak Wind: 153 deg @ 9 kt\n10-min Peak: 153 deg @ 9 kt\nDirection Deviation: 28 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 50 255 80
-Text: -30, -10, 1, "80", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 8 kt\nPeak Wind: 153 deg @ 9 kt\n10-min Peak: 153 deg @ 9 kt\nDirection Deviation: 28 deg\nSensor side: NW\nUpwind side: SE"
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 Color: 255 255 255
-Text: 31, -10, 1, "9", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 80.0 F\nRelative Humidity: 97%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 8 kt\nPeak Wind: 153 deg @ 9 kt\n10-min Peak: 153 deg @ 9 kt\nDirection Deviation: 28 deg\nSensor side: NW\nUpwind side: SE"
+Text: 31, -10, 1, "7", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.3 F\nDew Point: 78.8 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 155 deg @ 6 kt\nPeak Wind: 160 deg @ 7 kt\n10-min Peak: 160 deg @ 7 kt\nDirection Deviation: 14 deg\nSensor side: NW\nUpwind side: SE"
 End:
 Object: 28.62557686, -80.65707681
 Color: 255 255 255
-Icon: 0, 0, 164, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.7 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 164 deg @ 6 kt\nPeak Wind: 169 deg @ 8 kt\n10-min Peak: 169 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Icon: 0, 0, 184, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 4 kt\nPeak Wind: 181 deg @ 5 kt\n10-min Peak: 181 deg @ 5 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.7 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 164 deg @ 6 kt\nPeak Wind: 169 deg @ 8 kt\n10-min Peak: 169 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 4 kt\nPeak Wind: 181 deg @ 5 kt\n10-min Peak: 181 deg @ 5 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.7 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 164 deg @ 6 kt\nPeak Wind: 169 deg @ 8 kt\n10-min Peak: 169 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 4 kt\nPeak Wind: 181 deg @ 5 kt\n10-min Peak: 181 deg @ 5 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 Color: 255 255 255
-Text: 31, -10, 1, "8", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.9 F\nDew Point: 77.7 F\nRelative Humidity: 90%\n\nWind height: 204 ft\nAverage Wind: 164 deg @ 6 kt\nPeak Wind: 169 deg @ 8 kt\n10-min Peak: 169 deg @ 8 kt\nDirection Deviation: 14 deg\nSensor side: SW\nUpwind side: SW"
+Text: 31, -10, 1, "5", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.7 F\nDew Point: 76.4 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 184 deg @ 4 kt\nPeak Wind: 181 deg @ 5 kt\n10-min Peak: 181 deg @ 5 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
 End:
 Object: 0.00000000, 0.00000000
 Color: 255 255 255
-Icon: 0, 0, 175, 1, 3, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 93%\n\nWind height: 257 ft\nAverage Wind: 175 deg @ 9 kt\nPeak Wind: 178 deg @ 10 kt\n10-min Peak: 175 deg @ 10 kt\nDirection Deviation: 7 deg\nSensor side: NE\nUpwind side: N/A"
+Icon: 0, 0, 198, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 198 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 195 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 55 55
-Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 93%\n\nWind height: 257 ft\nAverage Wind: 175 deg @ 9 kt\nPeak Wind: 178 deg @ 10 kt\n10-min Peak: 175 deg @ 10 kt\nDirection Deviation: 7 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 198 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 195 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 50 255 80
-Text: -30, -10, 1, "78", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 93%\n\nWind height: 257 ft\nAverage Wind: 175 deg @ 9 kt\nPeak Wind: 178 deg @ 10 kt\n10-min Peak: 175 deg @ 10 kt\nDirection Deviation: 7 deg\nSensor side: NE\nUpwind side: N/A"
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 198 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 195 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "10", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 78.0 F\nRelative Humidity: 93%\n\nWind height: 257 ft\nAverage Wind: 175 deg @ 9 kt\nPeak Wind: 178 deg @ 10 kt\n10-min Peak: 175 deg @ 10 kt\nDirection Deviation: 7 deg\nSensor side: NE\nUpwind side: N/A"
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 85%\n\nWind height: 257 ft\nAverage Wind: 198 deg @ 7 kt\nPeak Wind: 197 deg @ 8 kt\n10-min Peak: 195 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
 End:
 Object: 28.58400000, -80.58320000
 Color: 255 255 255
-Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 Color: 255 255 255
-Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 05:00Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 08:55Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+End:
+
+; Frame 2026-09-05 09:00Z
+TimeRange: 2026-09-05T09:00:00 2026-09-05T09:05:00
+Object: 28.44425806, -80.56205269
+Color: 255 255 255
+Icon: 0, 0, 190, 1, 3, "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 8 kt\nPeak Wind: 189 deg @ 10 kt\n10-min Peak: 195 deg @ 11 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
+Color: 255 55 55
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 8 kt\nPeak Wind: 189 deg @ 10 kt\n10-min Peak: 195 deg @ 11 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
+Color: 50 255 80
+Text: -30, -10, 1, "76", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 8 kt\nPeak Wind: 189 deg @ 10 kt\n10-min Peak: 195 deg @ 11 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
+Color: 255 255 255
+Text: 31, -10, 1, "10", "KSC WINDS Tower 0002\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.5 F\nDew Point: 76.2 F\nRelative Humidity: 84%\n\nWind height: 204 ft\nAverage Wind: 190 deg @ 8 kt\nPeak Wind: 189 deg @ 10 kt\n10-min Peak: 195 deg @ 11 kt\nDirection Deviation: 4 deg\nSensor side: SE\nUpwind side: SE"
+End:
+Object: 28.51298142, -80.56130344
+Color: 255 255 255
+Icon: 0, 0, 179, 1, 2, "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 76.8 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 179 deg @ 3 kt\nPeak Wind: 190 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
+Color: 255 55 55
+Text: -30, 18, 1, "80", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 76.8 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 179 deg @ 3 kt\nPeak Wind: 190 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
+Color: 50 255 80
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 76.8 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 179 deg @ 3 kt\nPeak Wind: 190 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
+Color: 255 255 255
+Text: 31, -10, 1, "4", "KSC WINDS Tower 0006\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 80.3 F\nDew Point: 76.8 F\nRelative Humidity: 89%\n\nWind height: 204 ft\nAverage Wind: 179 deg @ 3 kt\nPeak Wind: 190 deg @ 4 kt\n10-min Peak: 176 deg @ 4 kt\nDirection Deviation: 30 deg\nSensor side: NW\nUpwind side: SE"
+End:
+Object: 28.56971917, -80.58641417
+Color: 255 255 255
+Icon: 0, 0, 162, 1, 2, "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 7 kt\nPeak Wind: 159 deg @ 8 kt\n10-min Peak: 159 deg @ 8 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Color: 255 55 55
+Text: -30, 18, 1, "81", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 7 kt\nPeak Wind: 159 deg @ 8 kt\n10-min Peak: 159 deg @ 8 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Color: 50 255 80
+Text: -30, -10, 1, "79", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 7 kt\nPeak Wind: 159 deg @ 8 kt\n10-min Peak: 159 deg @ 8 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+Color: 255 255 255
+Text: 31, -10, 1, "8", "KSC WINDS Tower 0110\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.1 F\nDew Point: 78.6 F\nRelative Humidity: 92%\n\nWind height: 204 ft\nAverage Wind: 162 deg @ 7 kt\nPeak Wind: 159 deg @ 8 kt\n10-min Peak: 159 deg @ 8 kt\nDirection Deviation: 12 deg\nSensor side: NW\nUpwind side: SE"
+End:
+Object: 28.62557686, -80.65707681
+Color: 255 255 255
+Icon: 0, 0, 187, 1, 2, "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.9 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 5 kt\nPeak Wind: 195 deg @ 6 kt\n10-min Peak: 195 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
+Color: 255 55 55
+Text: -30, 18, 1, "82", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.9 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 5 kt\nPeak Wind: 195 deg @ 6 kt\n10-min Peak: 195 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
+Color: 50 255 80
+Text: -30, -10, 1, "77", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.9 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 5 kt\nPeak Wind: 195 deg @ 6 kt\n10-min Peak: 195 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
+Color: 255 255 255
+Text: 31, -10, 1, "6", "KSC WINDS Tower 0313\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 204 ft\nTemperature: 81.8 F\nDew Point: 76.9 F\nRelative Humidity: 85%\n\nWind height: 204 ft\nAverage Wind: 187 deg @ 5 kt\nPeak Wind: 195 deg @ 6 kt\n10-min Peak: 195 deg @ 6 kt\nDirection Deviation: 5 deg\nSensor side: SW\nUpwind side: SW"
+End:
+Object: 0.00000000, 0.00000000
+Color: 255 255 255
+Icon: 0, 0, 199, 1, 2, "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
+Color: 255 55 55
+Text: -30, 18, 1, "81", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
+Color: 50 255 80
+Text: -30, -10, 1, "77", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
+Color: 255 255 255
+Text: 31, -10, 1, "8", "KSC WINDS Tower LC39\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 257 ft\nTemperature: 81.0 F\nDew Point: 77.0 F\nRelative Humidity: 86%\n\nWind height: 257 ft\nAverage Wind: 199 deg @ 7 kt\nPeak Wind: 199 deg @ 8 kt\n10-min Peak: 199 deg @ 8 kt\nDirection Deviation: 2 deg\nSensor side: NE\nUpwind side: N/A"
+End:
+Object: 28.58400000, -80.58320000
+Color: 255 255 255
+Icon: 0, 0, 0, 1, 1, "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
+Color: 255 255 255
+Text: 31, -10, 1, "0", "KSC WINDS Tower LC41\nLayer: 200+ ft\nObservation: 2026-09-05 09:00Z\nAge: 0 min\n\nThermo height: 230 ft\nTemperature: N/A\nDew Point: N/A\nRelative Humidity: N/A\n\nWind height: 230 ft\nAverage Wind: 0 deg @ 0 kt\nPeak Wind: 0 deg @ 0 kt\n10-min Peak: 0 deg @ 0 kt\nDirection Deviation: 0 deg\nSensor side: NW\nUpwind side: N/A"
 End:
