@@ -2,6 +2,13 @@ name: Update KSC WINDS Placefiles
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/workflows/update-winds.yml"
   schedule:
     # Request an update every 5 minutes (UTC).
     - cron: "*/5 * * * *"
@@ -37,11 +44,13 @@ jobs:
       - name: Install dependency
         run: pip install -r requirements.txt
 
+      - name: Test API parser
+        run: python -m unittest discover -s tests
+
       - name: Generate WINDS placefiles
         env:
           LOOKBACK_MINUTES: "60"
           STALE_MINUTES: "120"
-          KSC_WINDS_RESULT_URL: ${{ secrets.KSC_WINDS_RESULT_URL }}
         run: python src/ksc_winds_placefile.py
 
       - name: Generate Barnes divergence/convergence contours
@@ -58,7 +67,7 @@ jobs:
       - name: Generate 1-hour looping WINDS placefiles
         env:
           WINDS_LOOP_MINUTES: "60"
-          WINDS_LOOP_FRAME_HOLD_MINUTES: "5"
+          WINDS_LOOP_FRAME_HOLD_MINUTES: "1"
           WINDS_LOOP_CARRY_FORWARD_MINUTES: "7"
           BARNES_GRID_SPACING_M: "500"
           BARNES_LENGTH_KM: "10"
@@ -69,7 +78,6 @@ jobs:
           BARNES_HULL_BUFFER_KM: "12"
           LOOKBACK_MINUTES: "65"
           STALE_MINUTES: "120"
-          KSC_WINDS_RESULT_URL: ${{ secrets.KSC_WINDS_RESULT_URL }}
         run: python src/ksc_winds_loop_placefiles.py
 
       - name: Commit updated WINDS output

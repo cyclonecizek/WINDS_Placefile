@@ -1,138 +1,68 @@
-# KSC WINDS GR2 Placefile
+# WINDS GRLevelX Placefiles
 
-Standalone GitHub repository for NASA Kennedy Space Center WINDS WeatherTower
-data rendered as GRLevelX station-model placefiles.
+Live one-minute WINDS tower observations rendered for GRLevelX.
 
-Repository target:
+## Data source
 
-    cyclonecizek/KSC_WINDS_GR2_Placefile
+The updater uses `https://codiapi-winds1.rad.spaceforce.mil`:
 
-## Live outputs
+- `/winds/latest` establishes the newest available observation time.
+- `/winds/range` retrieves a rolling history ending at that time for current
+  station models and one-hour loops.
 
-After GitHub Pages is enabled, the GR placefile URLs will be:
+The API was reachable outside RAD during testing on October 16, 2026,
+although the supplied user guide describes RAD-only access.
+Requests validate TLS certificates and retry transient failures. There is no
+KSC archive token generation or archive fallback. The old
+`KSC_WINDS_RESULT_URL` secret is no longer used.
 
-- https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/ksc_winds_surface.txt
-- https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/ksc_winds_54ft.txt
-- https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/ksc_winds_200plus.txt
+Source raw-file headers confirm sensor heights in feet, winds in knots,
+and temperatures and dew points in Fahrenheit. `999` and JSON null values
+are treated as missing. Numeric towers with directional suffixes share a
+physical site; the side matching `prevailing` is preferred. Launch-pad tower
+identifiers remain distinct. API coordinates override the fallback site CSV.
+Current products use each site's newest timestamp so older valid values do
+not replace missing fields in the newest observation.
 
-The wind-barb sprite sheet is published at:
+## Published products
 
-- https://cyclonecizek.github.io/KSC_WINDS_GR2_Placefile/windbarbs.png
+Base URL: https://cyclonecizek.github.io/WINDS_Placefile/
 
-## Station model
+- `ksc_winds_surface.txt`: low thermodynamic sensor (up to 10 ft) and wind
+  sensor (up to 20 ft).
+- `ksc_winds_lowest.txt`: lowest available thermodynamic and wind sensors.
+- `ksc_winds_54ft.txt`: exact 54-ft sensor.
+- `ksc_winds_200plus.txt`: lowest wind sensor at or above 200 ft.
+- Matching `_loop_1hr.txt` files: one hour of source observation times.
+- `ksc_winds_54ft_barnes_divergence.txt` and
+  `ksc_winds_54ft_barnes_divergence_loop_1hr.txt`: Barnes wind analysis.
 
-Visible fields:
+Temperature appears in red, dew point in green, and wind barbs and
+one-minute peak gusts in white. Hover text includes the one-minute average,
+one-minute peak, ten-minute peak, observation time, and sensor height.
 
-- Black upper-right: Temperature (°F)
-- Green lower-left: Dew point (°F)
-- Black wind barb: 5-minute average wind direction/speed
-- Red lower-right: peak wind speed
+## Updates and running locally
 
-Hover the station-model components for:
+The Update KSC WINDS Placefiles workflow requests an update every five
+minutes. GitHub scheduling can be delayed. GR checks published files every
+60 seconds; this does not make the five-minute publishing job run every minute.
+The Deploy GitHub Pages workflow publishes `docs` after a successful update.
+Existing placefile URLs are unchanged.
 
-- tower/site
-- exact sensor height
-- observation time and age
-- temperature
-- dew point
-- relative humidity
-- average wind
-- peak wind
-- 10-minute peak wind
-- direction deviation
-- KSC directional sensor/upwind-side indicators
+```sh
+pip install -r requirements.txt
+python -m unittest discover -s tests
+python src/ksc_winds_placefile.py
+python src/ksc_winds_barnes_divergence.py
+LOOKBACK_MINUTES=65 python src/ksc_winds_loop_placefiles.py
+```
 
-## Three products
+Both observation generators accept `--input` with a saved API JSON array
+or a legacy WeatherTower CSV for offline use. `WINDS_API_BASE_URL` optionally
+overrides the API host. `LOOKBACK_MINUTES` must be 1 to 720 for live requests;
+the default is 90. Workflow windows are 60 minutes for current products and
+65 minutes for loops, below the API's 12-hour and 100,000-row limits for the
+current network size. `STALE_MINUTES` controls stale-station suppression.
 
-### Surface
-
-Combines the lowest thermodynamic sensor at or below 10 ft, commonly 6 ft,
-with the lowest wind sensor at or below 20 ft, commonly 12 ft.
-
-### 54 ft
-
-Uses the exact 54-ft record.
-
-### 200+ ft
-
-Uses the lowest available wind level at or above 200 ft for each tower.
-
-## GitHub setup
-
-1. Create a new public repository named:
-
-       KSC_WINDS_GR2_Placefile
-
-2. Upload the contents of this ZIP to the repository root.
-
-3. Confirm the repository contains:
-
-       .github/workflows/update-winds.yml
-       .github/workflows/pages.yml
-       docs/
-       src/
-       requirements.txt
-
-4. Go to:
-
-       Settings -> Actions -> General
-
-   and make sure GitHub Actions are enabled.
-
-5. Go to:
-
-       Settings -> Pages
-
-   and choose:
-
-       Source: GitHub Actions
-
-6. Go to:
-
-       Actions -> Update KSC WINDS Placefiles
-
-   and run the workflow manually once.
-
-7. When it completes successfully, the Pages workflow should run automatically.
-
-## Update schedule
-
-The WINDS updater is scheduled every five minutes at approximately:
-
-    :04 :09 :14 :19 :24 :29 :34 :39 :44 :49 :54 :59
-
-GR placefiles themselves contain:
-
-    RefreshSeconds: 60
-
-so GR checks the published Pages files every minute.
-
-## KSC archive handling
-
-The generator creates a rolling WeatherTower export URL automatically using
-the KSC token structure reverse-engineered from controlled 2026 searches.
-
-The fixed token fields are only verified for 2026. The script intentionally
-refuses automatic generation in another year until the token is revalidated.
-
-## SSL fallback
-
-The KSC archive may present a certificate chain that GitHub-hosted Linux
-runners cannot validate. The script first tries normal certificate validation.
-If that exact SSL verification fails, it retries only when the hostname is
-exactly:
-
-    kscweather.ksc.nasa.gov
-
-with certificate verification disabled.
-
-## Source files
-
-- src/ksc_winds_placefile.py
-- docs/ksc_winds_tower_sites.csv
-- docs/windbarbs.png
-- .github/workflows/update-winds.yml
-- .github/workflows/pages.yml
-
-The included TXT/JSON files are sample outputs and will be replaced by the
-scheduled workflow.
+If fetching or parsing fails, the workflow fails before committing outputs.
+Enable GitHub Pages with Source set to GitHub Actions in repository settings.

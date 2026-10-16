@@ -35,7 +35,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 LOOP_MINUTES = int(os.getenv("WINDS_LOOP_MINUTES", "60"))
-FRAME_HOLD_MINUTES = int(os.getenv("WINDS_LOOP_FRAME_HOLD_MINUTES", "5"))
+FRAME_HOLD_MINUTES = int(os.getenv("WINDS_LOOP_FRAME_HOLD_MINUTES", "1"))
 CARRY_FORWARD_MINUTES = int(os.getenv("WINDS_LOOP_CARRY_FORWARD_MINUTES", "7"))
 
 
@@ -59,7 +59,7 @@ def frame_times(obs, now: datetime | None = None):
     Return the last LOOP_MINUTES of *actual source observation times*.
 
     The loop is anchored to the newest KSC observation in the download, not
-    wall-clock now.  This prevents KSC archive latency from creating a
+    wall-clock now.  This prevents source latency from creating a
     misleading empty tail at the end of the loop.
     """
     if not obs:
@@ -326,25 +326,8 @@ def main():
     winds = load_module("ksc_winds_live", Path(args.winds_module))
     barnes = load_module("ksc_winds_barnes_live", Path(args.barnes_module))
 
-    if args.input:
-        raw = Path(args.input).read_text(encoding="utf-8", errors="replace")
-        obs = winds.parse_csv(raw)
-    else:
-        # Current production WINDS generator downloads the full tower network
-        # as four KSC archive groups, then merges/de-duplicates those groups.
-        # Reuse that exact production path for the 1-hour loop.
-        if hasattr(winds, "fetch_exports") and hasattr(winds, "merge_group_exports"):
-            obs = winds.merge_group_exports(winds.fetch_exports())
-        elif hasattr(winds, "fetch_export"):
-            # Backward compatibility with older single-export generator.
-            obs = winds.parse_csv(winds.fetch_export())
-        else:
-            raise RuntimeError(
-                "ksc_winds_placefile.py exposes neither the current "
-                "fetch_exports()/merge_group_exports() API nor legacy fetch_export()."
-            )
-
-    coords = winds.load_sites(Path(args.sites))
+    obs = winds.read_observations(args.input) if args.input else winds.fetch_observations()
+    coords = winds.observation_coords(obs, winds.load_sites(Path(args.sites)))
 
     outdir = Path(args.outdir)
     outdir.mkdir(parents=True, exist_ok=True)

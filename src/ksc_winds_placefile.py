@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NASA KSC WINDS WeatherTower archive -> three GRLevelX station-model placefiles.
+Live WINDS one-minute API -> GRLevelX station-model placefiles.
 
 Outputs:
   docs/ksc_winds_surface.txt
@@ -32,23 +32,12 @@ from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import quote
 
 import requests
-import urllib3
 
 USER_AGENT = "KSC-WINDS-GRLevelX/1.0"
-BASE60 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567"
-
-# Verified against controlled WeatherTower searches in August 2026.
-TOKEN_PREFIX = "Ba"
-TOKEN_BETWEEN = "ABa"
-GROUP_TOKEN_SUFFIXES = [
-    "AAAABaAAABaAAABaAABaAABaAABaAABaAaAndaBncnWaCnfaDnenXaEaFaGaHaIaMngaNnhnY",
-    "AAAABaAAABaAAABaAABaAABaAABaAABaAaOaPaQaRaSnaaTnbnZaUaZaaabacadaeafagahai",
-    "OAAABaAAABaAAABaAABaAABaAABaAABaAajakalamanaoapaqarasatauavawaxayaXaY",
-    "OAAABaAAABaAAABaAABaAABaAABaAABaAaza0a1a2a3oVoIoJoNoOoPoToUaJaKaL",
-]
+API_BASE = os.getenv("WINDS_API_BASE_URL", "https://codiapi-winds1.rad.spaceforce.mil").rstrip("/")
 
 # GitHub Pages location of the sprite sheet.
 def default_windbarb_url():
@@ -89,6 +78,8 @@ class Obs:
     dew_f: float | None
     rh: float | None
     pressure: float | None
+    latitude: float | None = None
+    longitude: float | None = None
 
 def fnum(v):
     try:
@@ -97,141 +88,83 @@ def fnum(v):
     except Exception:
         return None
 
-def enc60(n: int) -> str:
-    if not 0 <= n < len(BASE60):
-        raise ValueError(f"KSC token value out of range: {n}")
-    return BASE60[n]
-
-def encode_dt(dt: datetime) -> str:
-    dt = dt.astimezone(timezone.utc)
-    return enc60(dt.month) + enc60(dt.day) + enc60(dt.hour) + enc60(dt.minute)
-
-def build_token(start: datetime, end: datetime, suffix: str) -> str:
-    if end <= start:
-        raise ValueError("end must be later than start")
-    if start.year != 2026 or end.year != 2026:
-        raise ValueError("Automatic WeatherTower token is currently verified only for 2026")
-    return TOKEN_PREFIX + encode_dt(start) + TOKEN_BETWEEN + encode_dt(end) + suffix
-
-def build_export_url(start: datetime, end: datetime, suffix: str) -> str:
-    return (
-        "https://kscweather.ksc.nasa.gov/wxarchive/WeatherTower/Export/"
-        + build_token(start, end, suffix)
-    )
-
-def request_export(url: str, label: str) -> str:
-    headers = {
-        "User-Agent": USER_AGENT,
-        "Accept": "text/csv,text/plain,application/octet-stream,*/*",
-    }
-
-    retry_delays = [0, 10, 20, 40, 60]
-    last_error = None
-
-    for attempt, delay in enumerate(retry_delays, start=1):
-        if delay:
-            print(f"{label}: retrying in {delay} seconds...")
-            time.sleep(delay)
-
+def api_get(path: str):
+    """Fetch JSON with TLS verification and bounded retries for transient errors."""
+    for attempt in range(3):
         try:
-            try:
-                r = requests.get(url, timeout=60, headers=headers)
-            except requests.exceptions.SSLError:
-                if urlparse(url).hostname != "kscweather.ksc.nasa.gov":
-                    raise
-                print(
-                    f"{label}: WARNING - KSC TLS certificate chain could not be "
-                    "validated; retrying this exact NASA host with certificate "
-                    "verification disabled."
-                )
-                urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-                r = requests.get(url, timeout=60, headers=headers, verify=False)
-
+            r = requests.get(API_BASE + path, timeout=60,
+                             headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
             r.raise_for_status()
-            if attempt > 1:
-                print(f"{label}: request succeeded on attempt {attempt}.")
-            return r.text
+            return r.json()
+        except requests.exceptions.RequestException as exc:
+            status = exc.response.status_code if exc.response is not None else None
+            if attempt == 2 or (status is not None and status < 500 and status != 429):
+                raise
+            time.sleep(2 ** attempt)
 
-        except (
-            requests.exceptions.ConnectionError,
-            requests.exceptions.Timeout,
-            requests.exceptions.HTTPError,
-        ) as exc:
-            last_error = exc
-            print(
-                f"{label}: request attempt {attempt}/{len(retry_delays)} failed: "
-                f"{type(exc).__name__}: {exc}"
-            )
 
-            # 400/401/403/404 etc. are normally permanent for that token.
-            if isinstance(exc, requests.exceptions.HTTPError):
-                response = getattr(exc, "response", None)
-                status = response.status_code if response is not None else None
-                if status is not None and 400 <= status < 500 and status != 429:
-                    raise
+def parse_api(payload) -> list[Obs]:
+    if not isinstance(payload, list):
+        raise ValueError("WINDS API response must be a JSON array")
+    out = []
+    for row in payload:
+        if not isinstance(row, dict):
+            raise ValueError("WINDS API records must be objects")
+        height = fnum(row.get("hgt"))
+        if height is None or height <= 0 or height == 999:
+            continue  # Rain-only sensors have no height or station-model fields.
+        dt = datetime.fromisoformat(row["reading_datetime"].replace("Z", "+00:00"))
+        dt = dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt.astimezone(timezone.utc)
+        raw_site = str(row["tower"]).strip().upper()
+        match = re.fullmatch(r"(\d{1,4})(N|NE|E|SE|S|SW|W|NW)?", raw_site)
+        site = match[1].zfill(4) if match else raw_site
+        side = match[2] if match else None
+        def value(key):
+            v = fnum(row.get(key))
+            return None if v == 999 else v
+        out.append(Obs(
+            dt=dt, raw_site=raw_site, site=site, side_measured=side,
+            side_upwind=row.get("prevailing"), height_ft=int(height),
+            avg_dir=value("avg_dir_1min"), avg_spd=value("avg_spd_1min"),
+            peak_dir=value("peak_dir_1min"), peak_spd=value("peak_spd_1min"),
+            peak10_dir=value("peak_dir_10min"), peak10_spd=value("peak_spd_10min"),
+            deviation=value("dev"), temp_f=value("tmp"), dew_f=value("dp"),
+            rh=value("rh"), pressure=value("pre"),
+            latitude=value("lat"), longitude=value("lon"),
+        ))
+    if not out:
+        raise ValueError("No WINDS API observations parsed")
+    return out
 
-    raise RuntimeError(
-        f"{label}: KSC archive request failed after all retry attempts. "
-        f"Last error: {type(last_error).__name__}: {last_error}"
-    )
 
-def fetch_exports() -> list[tuple[str, str]]:
-    """
-    Fetch the full WINDS network as four smaller KSC archive requests.
-
-    Returns a list of (group_name, csv_text). All groups use exactly the
-    same rolling UTC time window so observations can be merged cleanly.
-    """
-    override = os.getenv("KSC_WINDS_RESULT_URL", "").strip()
-    if override:
-        print("KSC_WINDS_RESULT_URL override supplied; using it as one test group.")
-        return [("Override", request_export(override, "Override"))]
-
-    end = datetime.now(timezone.utc).replace(second=0, microsecond=0)
+def fetch_observations() -> list[Obs]:
+    # Anchor to the latest available observation, rather than the runner clock.
+    latest = parse_api(api_get("/winds/latest"))
+    end = max(o.dt for o in latest)
+    if not 0 < LOOKBACK_MINUTES <= 720:
+        raise ValueError("LOOKBACK_MINUTES must be between 1 and 720")
     start = end - timedelta(minutes=LOOKBACK_MINUTES)
+    fmt = "%Y-%m-%dT%H:%M:%S"
+    path = ("/winds/range?date>=" + quote(start.strftime(fmt))
+            + "&date<=" + quote(end.strftime(fmt)) + "&sort=asc")
+    obs = parse_api(api_get(path))
+    print(f"Live API: {len(obs)} sensor records, latest {end.isoformat()}")
+    return obs
 
-    results = []
-    for idx, suffix in enumerate(GROUP_TOKEN_SUFFIXES, start=1):
-        label = f"Group {idx}"
-        url = build_export_url(start, end, suffix)
-        print(f"{label} KSC WINDS export URL: {url}")
-        text = request_export(url, label)
-        results.append((label, text))
 
-    return results
+def read_observations(path: str) -> list[Obs]:
+    text = Path(path).read_text(encoding="utf-8-sig")
+    return parse_api(json.loads(text)) if text.lstrip().startswith("[") else parse_csv(text)
 
-def merge_group_exports(group_exports: list[tuple[str, str]]) -> list[Obs]:
-    """
-    Parse all group CSVs, concatenate them, and remove exact duplicate rows.
-    Overlapping tower selections are safe.
-    """
-    merged = []
-    seen = set()
 
-    for label, text in group_exports:
-        rows = parse_csv(text)
-        sites = sorted({o.site for o in rows})
-        print(
-            f"{label}: parsed {len(rows)} rows from {len(sites)} physical sites: "
-            + ", ".join(sites)
-        )
+def observation_coords(obs, fallback):
+    coords = dict(fallback)
+    for o in sorted(obs, key=lambda x: x.dt):
+        if (o.latitude is not None and o.longitude is not None
+                and -90 <= o.latitude <= 90 and -180 <= o.longitude <= 180):
+            coords[o.site] = (o.latitude, o.longitude)
+    return coords
 
-        for o in rows:
-            key = (
-                o.dt, o.raw_site, o.site, o.height_ft,
-                o.avg_dir, o.avg_spd, o.peak_dir, o.peak_spd,
-                o.peak10_dir, o.peak10_spd, o.deviation,
-                o.temp_f, o.dew_f, o.rh, o.pressure,
-            )
-            if key not in seen:
-                seen.add(key)
-                merged.append(o)
-
-    print(
-        f"Merged groups: {len(merged)} unique rows, "
-        f"{len({o.site for o in merged})} physical sites total."
-    )
-    return merged
 
 def normalize_site(raw: str):
     raw = raw.strip()
@@ -316,12 +249,12 @@ def side_score(o: Obs):
 def choose_side(rows):
     if not rows:
         return None
-    return max(rows, key=lambda o: (side_score(o), o.dt))
+    return max(rows, key=lambda o: (o.dt, side_score(o)))
 
 def latest_time_rows(obs, site):
-    # Keep the full lookback window for this site. Individual selectors below
-    # choose the latest/preferred record for their own height/variable.
-    return [o for o in obs if o.site == site]
+    rows = [o for o in obs if o.site == site]
+    latest = max((o.dt for o in rows), default=None)
+    return [o for o in rows if o.dt == latest]
 
 def pick_height(rows, height):
     return choose_side([o for o in rows if o.height_ft == height])
@@ -419,7 +352,7 @@ def hover(site, product, wind, thermo, now):
         lines += [
             "",
             f"Wind height: {wind.height_ft} ft",
-            f"Average Wind: {fmt_num(wind.avg_dir,0,' deg')} @ {fmt_num(wind.avg_spd,0,' kt')}",
+            f"1-min Average Wind: {fmt_num(wind.avg_dir,0,' deg')} @ {fmt_num(wind.avg_spd,0,' kt')}",
             f"Peak Wind: {fmt_num(wind.peak_dir,0,' deg')} @ {fmt_num(wind.peak_spd,0,' kt')}",
             f"10-min Peak: {fmt_num(wind.peak10_dir,0,' deg')} @ {fmt_num(wind.peak10_spd,0,' kt')}",
             f"Direction Deviation: {fmt_num(wind.deviation,0,' deg')}",
@@ -470,7 +403,7 @@ def header(title):
         "Threshold: 200",
         f'IconFile: 1, 96, 96, 48, 48, "{BARB_URL}"',
         'Font: 1, 13, 1, "Arial"',
-        "; NASA KSC Spaceport Weather Archive WINDS tower data",
+        "; Live WINDS one-minute API tower data",
         "; red=temp F, green=dewpoint F, white barb=avg wind, white=peak/gust kt",
         "; Hover wind barb/text for full observation.",
     ]
@@ -523,35 +456,17 @@ def generate_products(obs, coords):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--input", help="local WeatherTower export CSV")
+    ap.add_argument("--input", help="local WINDS API JSON or legacy WeatherTower CSV")
     ap.add_argument("--sites", default="docs/ksc_winds_tower_sites.csv")
     ap.add_argument("--surface", default="docs/ksc_winds_surface.txt")
     ap.add_argument("--lowest", default="docs/ksc_winds_lowest.txt")
     ap.add_argument("--ft54", default="docs/ksc_winds_54ft.txt")
     ap.add_argument("--plus200", default="docs/ksc_winds_200plus.txt")
     ap.add_argument("--json-output", default="docs/ksc_winds.json")
-    ap.add_argument("--print-url", action="store_true")
-    ap.add_argument("--start")
-    ap.add_argument("--end")
     args = ap.parse_args()
 
-    if args.print_url:
-        if args.start and args.end:
-            start = datetime.strptime(args.start, "%Y-%m-%dT%H:%M").replace(tzinfo=timezone.utc)
-            end = datetime.strptime(args.end, "%Y-%m-%dT%H:%M").replace(tzinfo=timezone.utc)
-        else:
-            end = datetime.now(timezone.utc).replace(second=0, microsecond=0)
-            start = end - timedelta(minutes=LOOKBACK_MINUTES)
-        for idx, suffix in enumerate(GROUP_TOKEN_SUFFIXES, start=1):
-            print(f"Group {idx}: {build_export_url(start, end, suffix)}")
-        return
-
-    if args.input:
-        text = Path(args.input).read_text(encoding="utf-8", errors="replace")
-        obs = parse_csv(text)
-    else:
-        obs = merge_group_exports(fetch_exports())
-    coords = load_sites(Path(args.sites))
+    obs = read_observations(args.input) if args.input else fetch_observations()
+    coords = observation_coords(obs, load_sites(Path(args.sites)))
     surface, lowest, ft54, plus200, diag = generate_products(obs, coords)
 
     Path(args.surface).write_text(surface, encoding="utf-8")
@@ -566,7 +481,7 @@ def main():
         "sites": diag,
     }, indent=2), encoding="utf-8")
 
-    print(f"Parsed {len(obs)} WeatherTower rows; coordinate sites={len(coords)}")
+    print(f"Parsed {len(obs)} WINDS rows; coordinate sites={len(coords)}")
     print("Wrote:", args.surface, args.lowest, args.ft54, args.plus200)
 
 if __name__ == "__main__":
