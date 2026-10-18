@@ -32,6 +32,12 @@ Base URL: https://cyclonecizek.github.io/WINDS_Placefile/
   sensor (up to 20 ft).
 - `ksc_winds_lowest.txt`: lowest available thermodynamic and wind sensors.
 - `ksc_winds_54ft.txt`: exact 54-ft sensor.
+- `ksc_winds_54ft_lowest_thermo.txt`: exact 54-ft winds with independently
+  selected lowest valid temperature, dew point, and humidity sensors. Humidity
+  appears in cyan at upper right; hover details identify each field’s height.
+  Only the newest observation time at each site is used. Missing 54-ft winds
+  are left blank, while available thermodynamic fields remain visible. This
+  product is included in the existing WINDS update workflow and cron job.
 - `ksc_winds_200plus.txt`: lowest wind sensor at or above 200 ft.
 - Matching `_loop_1hr.txt` files: one hour of source observation times.
 - `ksc_winds_54ft_barnes_divergence.txt` and

@@ -6,6 +6,7 @@ Outputs:
   docs/ksc_winds_surface.txt
   docs/ksc_winds_lowest.txt
   docs/ksc_winds_54ft.txt
+  docs/ksc_winds_54ft_lowest_thermo.txt
   docs/ksc_winds_200plus.txt
   docs/ksc_winds.json
 
@@ -29,7 +30,7 @@ import os
 import re
 import time
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -361,7 +362,7 @@ def hover(site, product, wind, thermo, now):
         ]
     return "\n".join(lines)
 
-def emit_station(lines, lat, lon, site, product, wind, thermo, now):
+def emit_station(lines, lat, lon, site, product, wind, thermo, now, *, hover_override=None, show_rh=False):
     base = wind or thermo
     if not base:
         return
@@ -369,7 +370,7 @@ def emit_station(lines, lat, lon, site, product, wind, thermo, now):
     if age > STALE_MINUTES:
         return
 
-    h = esc(hover(site, product, wind, thermo, now))
+    h = esc(hover_override if hover_override is not None else hover(site, product, wind, thermo, now))
     lines.append(f"Object: {lat:.8f}, {lon:.8f}")
 
     # Larger WHITE wind barb centered on the station.
@@ -388,6 +389,11 @@ def emit_station(lines, lat, lon, site, product, wind, thermo, now):
     if thermo and thermo.dew_f is not None:
         lines.append("Color: 50 255 80")
         lines.append(f'Text: -30, -10, 1, "{thermo.dew_f:.0f}", "{h}"')
+
+    # Mixed-height product optionally shows humidity above the gust value.
+    if show_rh and thermo and thermo.rh is not None:
+        lines.append("Color: 130 210 255")
+        lines.append(f'Text: 31, 18, 1, "{thermo.rh:.0f}%", "{h}"')
 
     # Peak/gust wind: lower-right, WHITE.
     if wind and wind.peak_spd is not None:
@@ -454,6 +460,58 @@ def generate_products(obs, coords):
         diagnostics,
     )
 
+def pick_lowest_thermo_fields(rows):
+    """Choose each field independently at the site's newest observation time."""
+    selected = {}
+    for field in ("temp_f", "dew_f", "rh"):
+        candidates = [o for o in rows if o.height_ft > 0 and getattr(o, field) is not None
+                      and math.isfinite(getattr(o, field)) and getattr(o, field) not in (999, 9999)
+                      and (field != "rh" or 0 <= o.rh <= 100)]
+        height = min((o.height_ft for o in candidates), default=None)
+        selected[field] = choose_side([o for o in candidates if o.height_ft == height])
+    return selected
+
+
+def generate_54ft_lowest_thermo(obs, coords, now=None):
+    now = now or datetime.now(timezone.utc)
+    lines = header("KSC WINDS 54 ft Wind + Lowest Thermodynamics")
+    lines += ["; Winds strictly at 54 ft AGL; each thermodynamic field uses its lowest valid sensor.",
+              "; Upper-right cyan = relative humidity %. Hover for individual sensor heights."]
+    for site, (lat, lon) in sorted(coords.items()):
+        rows = latest_time_rows(obs, site)
+        wind = choose_side([o for o in rows if o.height_ft == 54
+                            and o.avg_spd is not None and o.avg_spd >= 0 and o.avg_spd not in (999, 9999)
+                            and o.avg_dir is not None and 0 <= o.avg_dir <= 360])
+        fields = pick_lowest_thermo_fields(rows)
+        base = wind or next((o for o in fields.values() if o is not None), None)
+        if base is None:
+            continue
+        # This rendering record combines values only. Hover details below retain
+        # each original sensor's height, timestamp, and side.
+        thermo = replace(base, **{field: getattr(o, field) if o else None
+                                  for field, o in fields.items()})
+        details = [f"KSC WINDS Tower {site}", "Layer: 54 ft Wind + Lowest Thermodynamics",
+                   f"Observation: {base.dt:%Y-%m-%d %H:%MZ}"]
+        if wind:
+            details += ["Wind height: 54 ft AGL",
+                        f"1-min Average Wind: {fmt_num(wind.avg_dir,0,' deg')} @ {fmt_num(wind.avg_spd,0,' kt')}",
+                        f"Peak Wind: {fmt_num(wind.peak_spd,0,' kt')}",
+                        f"10-min Peak: {fmt_num(wind.peak10_spd,0,' kt')}",
+                        f"Wind sensor side: {wind.side_measured or 'N/A'}"]
+        else:
+            details.append("54 ft wind: N/A (no alternate height substituted)")
+        for field, label, units in [("temp_f", "Temperature", " F"),
+                                    ("dew_f", "Dew Point", " F"),
+                                    ("rh", "Relative Humidity", "%")]:
+            o = fields[field]
+            details.append(f"{label}: {fmt_num(getattr(o, field), 0 if field == 'rh' else 1, units)}"
+                           f" @ {o.height_ft} ft AGL ({o.dt:%Y-%m-%d %H:%MZ}; side {o.side_measured or 'N/A'})"
+                           if o else f"{label}: N/A")
+        emit_station(lines, lat, lon, site, "54 ft Wind + Lowest Thermodynamics", wind, thermo, now,
+                     hover_override="\n".join(details), show_rh=True)
+    return "\n".join(lines) + "\n"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", help="local WINDS API JSON or legacy WeatherTower CSV")
@@ -461,6 +519,7 @@ def main():
     ap.add_argument("--surface", default="docs/ksc_winds_surface.txt")
     ap.add_argument("--lowest", default="docs/ksc_winds_lowest.txt")
     ap.add_argument("--ft54", default="docs/ksc_winds_54ft.txt")
+    ap.add_argument("--ft54-lowest-thermo", default="docs/ksc_winds_54ft_lowest_thermo.txt")
     ap.add_argument("--plus200", default="docs/ksc_winds_200plus.txt")
     ap.add_argument("--json-output", default="docs/ksc_winds.json")
     args = ap.parse_args()
@@ -472,6 +531,7 @@ def main():
     Path(args.surface).write_text(surface, encoding="utf-8")
     Path(args.lowest).write_text(lowest, encoding="utf-8")
     Path(args.ft54).write_text(ft54, encoding="utf-8")
+    Path(args.ft54_lowest_thermo).write_text(generate_54ft_lowest_thermo(obs, coords), encoding="utf-8")
     Path(args.plus200).write_text(plus200, encoding="utf-8")
     Path(args.json_output).write_text(json.dumps({
         "generated_utc": datetime.now(timezone.utc).isoformat(),
@@ -482,7 +542,7 @@ def main():
     }, indent=2), encoding="utf-8")
 
     print(f"Parsed {len(obs)} WINDS rows; coordinate sites={len(coords)}")
-    print("Wrote:", args.surface, args.lowest, args.ft54, args.plus200)
+    print("Wrote:", args.surface, args.lowest, args.ft54, args.ft54_lowest_thermo, args.plus200)
 
 if __name__ == "__main__":
     main()
