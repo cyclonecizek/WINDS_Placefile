@@ -204,7 +204,9 @@ def generate_tower_loop(winds, obs, coords, product_key: str, title: str):
 
 
 def barnes_station_for_obs(barnes, site, lat, lon, o):
-    if o is None or o.avg_dir is None or o.avg_spd is None:
+    if (o is None or o.avg_dir is None or o.avg_spd is None
+            or not 0 <= o.avg_dir <= 360 or o.avg_spd < 0
+            or o.avg_spd in (999, 9999)):
         return None
 
     direction = float(o.avg_dir) % 360.0
@@ -267,6 +269,8 @@ def generate_barnes_loop(winds, barnes, obs, coords):
             if not rows:
                 continue
             o54 = winds.pick_height(rows, 54)
+            if o54 and (frame - o54.dt).total_seconds() > 300:
+                continue
             s = barnes_station_for_obs(barnes, site, lat, lon, o54)
             if s is not None:
                 stations.append(s)

@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
 Create a GRLevelX contour placefile of low-level divergence/convergence
-from the already-generated KSC 54-ft WINDS station placefile.
+directly from the live WINDS one-minute API (54-ft sensors).
 
 Input:
-    docs/ksc_winds_54ft.txt
+    Live /winds/latest API, or an explicitly supplied local JSON/placefile.
 
 Outputs:
     docs/ksc_winds_54ft_barnes_divergence.txt
     docs/ksc_winds_54ft_barnes_divergence.json
 
 Method:
-  1. Parse each 54-ft station's average wind from the hover text.
+  1. Select fresh 54-ft observations directly from API values.
   2. Convert meteorological direction/speed to Cartesian u/v in m/s.
   3. Perform a two-pass Barnes objective analysis of u and v.
   4. Compute horizontal divergence du/dx + dv/dy.
@@ -40,10 +40,10 @@ KT_TO_MPS = 0.5144444444444445
 
 # Defaults tuned for the spatial scale of the KSC tower network.
 GRID_SPACING_M = float(os.getenv("BARNES_GRID_SPACING_M", "500"))
-BARNES_LENGTH_KM = float(os.getenv("BARNES_LENGTH_KM", "8"))
+BARNES_LENGTH_KM = float(os.getenv("BARNES_LENGTH_KM", "10"))
 BARNES_GAMMA = float(os.getenv("BARNES_GAMMA", "0.30"))
-MAX_INFLUENCE_KM = float(os.getenv("BARNES_MAX_INFLUENCE_KM", "20"))
-NEAREST_STATION_KM = float(os.getenv("BARNES_NEAREST_STATION_KM", "9"))
+MAX_INFLUENCE_KM = float(os.getenv("BARNES_MAX_INFLUENCE_KM", "28"))
+NEAREST_STATION_KM = float(os.getenv("BARNES_NEAREST_STATION_KM", "12"))
 MIN_NEARBY_STATIONS = int(os.getenv("BARNES_MIN_NEARBY_STATIONS", "3"))
 HULL_BUFFER_KM = float(os.getenv("BARNES_HULL_BUFFER_KM", "12"))
 
@@ -183,6 +183,31 @@ def parse_54ft_placefile(text: str) -> list[Station]:
     for s in stations:
         dedup[(round(s.lat, 6), round(s.lon, 6))] = s
     return list(dedup.values())
+
+
+def stations_from_observations(obs, coords, now=None):
+    """Fresh, exact 54-ft API winds without rounding through placefile hover text."""
+    import ksc_winds_placefile as winds
+    now = now or datetime.now(timezone.utc)
+    selected = {}
+    for site, (lat, lon) in sorted(coords.items()):
+        if not (26 <= lat <= 31 and -84 <= lon <= -77):
+            continue
+        rows = [o for o in obs
+                if o.site == site and o.height_ft == 54 and 0 <= (now - o.dt).total_seconds() <= 300
+                and o.avg_spd is not None and math.isfinite(o.avg_spd)
+                and o.avg_spd >= 0 and o.avg_spd not in (999, 9999)
+                and o.avg_dir is not None and 0 <= o.avg_dir <= 360]
+        o = winds.choose_side(rows)
+        if o is None:
+            continue
+        angle = math.radians(o.avg_dir)
+        selected[(round(lat, 6), round(lon, 6))] = Station(
+            name=site, lat=lat, lon=lon, direction_deg=o.avg_dir,
+            speed_kt=o.avg_spd, obs_text=o.dt.strftime("%Y-%m-%d %H:%MZ"),
+            u=-o.avg_spd * KT_TO_MPS * math.sin(angle),
+            v=-o.avg_spd * KT_TO_MPS * math.cos(angle))
+    return list(selected.values())
 
 
 def project_stations(stations: list[Station]):
@@ -716,8 +741,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument(
         "--input",
-        default="docs/ksc_winds_54ft.txt",
-        help="generated 54-ft KSC WINDS placefile",
+        default=None,
+        help="optional local WINDS API JSON, CSV, or legacy 54-ft placefile; defaults to live API",
     )
     ap.add_argument(
         "--output",
@@ -729,11 +754,19 @@ def main():
     )
     args = ap.parse_args()
 
-    text = Path(args.input).read_text(encoding="utf-8", errors="replace")
-    stations = parse_54ft_placefile(text)
-    print(f"Barnes analysis: parsed {len(stations)} 54-ft wind stations.")
-
+    import ksc_winds_placefile as winds
+    if args.input and Path(args.input).read_text(encoding="utf-8-sig").lstrip().startswith(";"):
+        stations = parse_54ft_placefile(Path(args.input).read_text(encoding="utf-8"))
+        source = "Explicit local GR2 placefile"
+    else:
+        obs = winds.read_observations(args.input) if args.input else winds.parse_api(winds.api_get("/winds/latest"))
+        coords = winds.observation_coords(obs, winds.load_sites(Path("docs/ksc_winds_tower_sites.csv")))
+        stations = stations_from_observations(obs, coords)
+        source = "Local WINDS observations" if args.input else winds.API_BASE + "/winds/latest"
+    print(f"Barnes analysis: {len(stations)} fresh 54-ft wind stations from {source}.")
     placefile, diag = build_placefile(stations)
+    diag.update(source=source, sensor_height_ft=54, max_observation_age_minutes=5)
+    placefile = "; Source: " + source + "\n" + placefile
     Path(args.output).write_text(placefile, encoding="utf-8")
     Path(args.json_output).write_text(
         json.dumps(diag, indent=2),

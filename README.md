@@ -72,3 +72,17 @@ current network size. `STALE_MINUTES` controls stale-station suppression.
 
 If fetching or parsing fails, the workflow fails before committing outputs.
 Enable GitHub Pages with Source set to GitHub Actions in repository settings.
+
+## Barnes analysis source
+
+The current 54-ft Barnes placefile reads `/winds/latest` directly from the live
+WINDS API, preserving full precision and selecting the prevailing sensor side.
+It requires observations no more than five minutes old and at least five
+distinct stations. Missing or stale winds are not replaced with archive data.
+Explicit local JSON/CSV or legacy placefile input remains available via `--input`.
+The one-hour Barnes loop already uses API observations via the WINDS collector.
+Both use a 500 m grid, 10 km Barnes length, gamma 0.30, 28 km influence radius,
+12 km nearest-station limit, at least three locally supporting stations, and a
+12 km buffer around the tower network hull. Negative divergence is convergence
+(warm colors), positive is divergence (cool colors), in units of 10^-4 s^-1.
+Existing placefile URLs and the WINDS cron job remain in use.
