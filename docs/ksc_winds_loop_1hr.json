@@ -1,15 +1,10 @@
 {
-  "generated_utc": "2026-10-20T14:13:19.316697+00:00",
+  "generated_utc": "2026-10-20T14:15:06.176958+00:00",
   "loop_minutes": 60,
   "carry_forward_minutes": 7,
   "records_parsed": 9636,
   "products": {
     "surface": [
-      {
-        "time_utc": "2026-10-20T13:11:00+00:00",
-        "end_utc": "2026-10-20T13:12:00+00:00",
-        "stations_plotted": 25
-      },
       {
         "time_utc": "2026-10-20T13:12:00+00:00",
         "end_utc": "2026-10-20T13:13:00+00:00",
@@ -309,14 +304,14 @@
         "time_utc": "2026-10-20T14:11:00+00:00",
         "end_utc": "2026-10-20T14:12:00+00:00",
         "stations_plotted": 25
+      },
+      {
+        "time_utc": "2026-10-20T14:12:00+00:00",
+        "end_utc": "2026-10-20T14:13:00+00:00",
+        "stations_plotted": 25
       }
     ],
     "lowest": [
-      {
-        "time_utc": "2026-10-20T13:11:00+00:00",
-        "end_utc": "2026-10-20T13:12:00+00:00",
-        "stations_plotted": 29
-      },
       {
         "time_utc": "2026-10-20T13:12:00+00:00",
         "end_utc": "2026-10-20T13:13:00+00:00",
@@ -616,14 +611,14 @@
         "time_utc": "2026-10-20T14:11:00+00:00",
         "end_utc": "2026-10-20T14:12:00+00:00",
         "stations_plotted": 29
+      },
+      {
+        "time_utc": "2026-10-20T14:12:00+00:00",
+        "end_utc": "2026-10-20T14:13:00+00:00",
+        "stations_plotted": 30
       }
     ],
     "54ft": [
-      {
-        "time_utc": "2026-10-20T13:11:00+00:00",
-        "end_utc": "2026-10-20T13:12:00+00:00",
-        "stations_plotted": 29
-      },
       {
         "time_utc": "2026-10-20T13:12:00+00:00",
         "end_utc": "2026-10-20T13:13:00+00:00",
@@ -922,16 +917,16 @@
       {
         "time_utc": "2026-10-20T14:11:00+00:00",
         "end_utc": "2026-10-20T14:12:00+00:00",
+        "stations_plotted": 29
+      },
+      {
+        "time_utc": "2026-10-20T14:12:00+00:00",
+        "end_utc": "2026-10-20T14:13:00+00:00",
         "stations_plotted": 29
       }
     ],
     "200plus": [
       {
-        "time_utc": "2026-10-20T13:11:00+00:00",
-        "end_utc": "2026-10-20T13:12:00+00:00",
-        "stations_plotted": 6
-      },
-      {
         "time_utc": "2026-10-20T13:12:00+00:00",
         "end_utc": "2026-10-20T13:13:00+00:00",
         "stations_plotted": 7
@@ -1230,92 +1225,20 @@
         "time_utc": "2026-10-20T14:11:00+00:00",
         "end_utc": "2026-10-20T14:12:00+00:00",
         "stations_plotted": 6
+      },
+      {
+        "time_utc": "2026-10-20T14:12:00+00:00",
+        "end_utc": "2026-10-20T14:13:00+00:00",
+        "stations_plotted": 6
       }
     ],
     "barnes_54ft": [
-      {
-        "time_utc": "2026-10-20T13:11:00+00:00",
-        "end_utc": "2026-10-20T13:12:00+00:00",
-        "stations_used": 22,
-        "analysis": {
-          "generated_utc": "2026-10-20T14:13:20.359196+00:00",
-          "stations_used": 22,
-          "latest_source_observation": "2026-10-20 13:11Z",
-          "grid_spacing_m": 500.0,
-          "barnes_length_km": 10.0,
-          "barnes_gamma": 0.3,
-          "max_influence_km": 28.0,
-          "nearest_station_km": 12.0,
-          "min_nearby_stations": 3,
-          "hull_buffer_km": 12.0,
-          "grid_nx": 98,
-          "grid_ny": 131,
-          "valid_divergence_gridpoints": 8453,
-          "min_divergence_x1e4_s-1": -6.009657467255943,
-          "max_divergence_x1e4_s-1": 3.2930314097265834,
-          "contour_segment_counts": {
-            "-12.0": 0,
-            "-11.0": 0,
-            "-10.0": 0,
-            "-9.0": 0,
-            "-8.0": 0,
-            "-7.0": 0,
-            "-6.0": 6,
-            "-5.0": 41,
-            "-4.0": 50,
-            "-3.0": 190,
-            "-2.0": 327,
-            "-1.0": 404,
-            "0.0": 331,
-            "1.0": 144,
-            "2.0": 34,
-            "3.0": 11,
-            "4.0": 0,
-            "5.0": 0,
-            "6.0": 0,
-            "7.0": 0,
-            "8.0": 0,
-            "9.0": 0,
-            "10.0": 0,
-            "11.0": 0,
-            "12.0": 0
-          },
-          "contour_polyline_counts": {
-            "-12.0": 0,
-            "-11.0": 0,
-            "-10.0": 0,
-            "-9.0": 0,
-            "-8.0": 0,
-            "-7.0": 0,
-            "-6.0": 1,
-            "-5.0": 1,
-            "-4.0": 2,
-            "-3.0": 3,
-            "-2.0": 3,
-            "-1.0": 3,
-            "0.0": 6,
-            "1.0": 3,
-            "2.0": 1,
-            "3.0": 1,
-            "4.0": 0,
-            "5.0": 0,
-            "6.0": 0,
-            "7.0": 0,
-            "8.0": 0,
-            "9.0": 0,
-            "10.0": 0,
-            "11.0": 0,
-            "12.0": 0
-          },
-          "status": "ok"
-        }
-      },
       {
         "time_utc": "2026-10-20T13:12:00+00:00",
         "end_utc": "2026-10-20T13:13:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:21.057995+00:00",
+          "generated_utc": "2026-10-20T14:15:06.998633+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:12Z",
           "grid_spacing_m": 500.0,
@@ -1392,7 +1315,7 @@
         "end_utc": "2026-10-20T13:14:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:21.758682+00:00",
+          "generated_utc": "2026-10-20T14:15:07.541428+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:13Z",
           "grid_spacing_m": 500.0,
@@ -1469,7 +1392,7 @@
         "end_utc": "2026-10-20T13:15:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:22.459916+00:00",
+          "generated_utc": "2026-10-20T14:15:08.083394+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:14Z",
           "grid_spacing_m": 500.0,
@@ -1546,7 +1469,7 @@
         "end_utc": "2026-10-20T13:16:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:23.161139+00:00",
+          "generated_utc": "2026-10-20T14:15:08.626923+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:15Z",
           "grid_spacing_m": 500.0,
@@ -1623,7 +1546,7 @@
         "end_utc": "2026-10-20T13:17:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:23.865008+00:00",
+          "generated_utc": "2026-10-20T14:15:09.171452+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:16Z",
           "grid_spacing_m": 500.0,
@@ -1700,7 +1623,7 @@
         "end_utc": "2026-10-20T13:18:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:24.565072+00:00",
+          "generated_utc": "2026-10-20T14:15:09.711053+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:17Z",
           "grid_spacing_m": 500.0,
@@ -1777,7 +1700,7 @@
         "end_utc": "2026-10-20T13:19:00+00:00",
         "stations_used": 23,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:25.287924+00:00",
+          "generated_utc": "2026-10-20T14:15:10.270773+00:00",
           "stations_used": 23,
           "latest_source_observation": "2026-10-20 13:18Z",
           "grid_spacing_m": 500.0,
@@ -1854,7 +1777,7 @@
         "end_utc": "2026-10-20T13:20:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:25.909412+00:00",
+          "generated_utc": "2026-10-20T14:15:10.754254+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:19Z",
           "grid_spacing_m": 500.0,
@@ -1931,7 +1854,7 @@
         "end_utc": "2026-10-20T13:21:00+00:00",
         "stations_used": 20,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:26.524777+00:00",
+          "generated_utc": "2026-10-20T14:15:11.228010+00:00",
           "stations_used": 20,
           "latest_source_observation": "2026-10-20 13:20Z",
           "grid_spacing_m": 500.0,
@@ -2008,7 +1931,7 @@
         "end_utc": "2026-10-20T13:22:00+00:00",
         "stations_used": 20,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:27.109388+00:00",
+          "generated_utc": "2026-10-20T14:15:11.685132+00:00",
           "stations_used": 20,
           "latest_source_observation": "2026-10-20 13:21Z",
           "grid_spacing_m": 500.0,
@@ -2085,7 +2008,7 @@
         "end_utc": "2026-10-20T13:23:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:27.739027+00:00",
+          "generated_utc": "2026-10-20T14:15:12.170192+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:22Z",
           "grid_spacing_m": 500.0,
@@ -2162,7 +2085,7 @@
         "end_utc": "2026-10-20T13:24:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:28.453469+00:00",
+          "generated_utc": "2026-10-20T14:15:12.713017+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:23Z",
           "grid_spacing_m": 500.0,
@@ -2239,7 +2162,7 @@
         "end_utc": "2026-10-20T13:25:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:29.084864+00:00",
+          "generated_utc": "2026-10-20T14:15:13.200891+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:24Z",
           "grid_spacing_m": 500.0,
@@ -2316,7 +2239,7 @@
         "end_utc": "2026-10-20T13:26:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:29.802797+00:00",
+          "generated_utc": "2026-10-20T14:15:13.744539+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:25Z",
           "grid_spacing_m": 500.0,
@@ -2393,7 +2316,7 @@
         "end_utc": "2026-10-20T13:27:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:30.526846+00:00",
+          "generated_utc": "2026-10-20T14:15:14.287263+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:26Z",
           "grid_spacing_m": 500.0,
@@ -2470,7 +2393,7 @@
         "end_utc": "2026-10-20T13:28:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:31.238824+00:00",
+          "generated_utc": "2026-10-20T14:15:14.842300+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:27Z",
           "grid_spacing_m": 500.0,
@@ -2547,7 +2470,7 @@
         "end_utc": "2026-10-20T13:29:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:31.954336+00:00",
+          "generated_utc": "2026-10-20T14:15:15.391404+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:28Z",
           "grid_spacing_m": 500.0,
@@ -2624,7 +2547,7 @@
         "end_utc": "2026-10-20T13:30:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:32.666133+00:00",
+          "generated_utc": "2026-10-20T14:15:15.943960+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:29Z",
           "grid_spacing_m": 500.0,
@@ -2701,7 +2624,7 @@
         "end_utc": "2026-10-20T13:31:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:33.385697+00:00",
+          "generated_utc": "2026-10-20T14:15:16.491965+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:30Z",
           "grid_spacing_m": 500.0,
@@ -2778,7 +2701,7 @@
         "end_utc": "2026-10-20T13:32:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:34.095670+00:00",
+          "generated_utc": "2026-10-20T14:15:17.039566+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:31Z",
           "grid_spacing_m": 500.0,
@@ -2855,7 +2778,7 @@
         "end_utc": "2026-10-20T13:33:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:34.811693+00:00",
+          "generated_utc": "2026-10-20T14:15:17.584654+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:32Z",
           "grid_spacing_m": 500.0,
@@ -2932,7 +2855,7 @@
         "end_utc": "2026-10-20T13:34:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:35.516781+00:00",
+          "generated_utc": "2026-10-20T14:15:18.129373+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:33Z",
           "grid_spacing_m": 500.0,
@@ -3009,7 +2932,7 @@
         "end_utc": "2026-10-20T13:35:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:36.218019+00:00",
+          "generated_utc": "2026-10-20T14:15:18.675821+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:34Z",
           "grid_spacing_m": 500.0,
@@ -3086,7 +3009,7 @@
         "end_utc": "2026-10-20T13:36:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:36.934932+00:00",
+          "generated_utc": "2026-10-20T14:15:19.224721+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:35Z",
           "grid_spacing_m": 500.0,
@@ -3163,7 +3086,7 @@
         "end_utc": "2026-10-20T13:37:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:37.633114+00:00",
+          "generated_utc": "2026-10-20T14:15:19.783444+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:36Z",
           "grid_spacing_m": 500.0,
@@ -3240,7 +3163,7 @@
         "end_utc": "2026-10-20T13:38:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:38.335115+00:00",
+          "generated_utc": "2026-10-20T14:15:20.331750+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:37Z",
           "grid_spacing_m": 500.0,
@@ -3317,7 +3240,7 @@
         "end_utc": "2026-10-20T13:39:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:39.045323+00:00",
+          "generated_utc": "2026-10-20T14:15:20.882422+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:38Z",
           "grid_spacing_m": 500.0,
@@ -3394,7 +3317,7 @@
         "end_utc": "2026-10-20T13:40:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:39.751603+00:00",
+          "generated_utc": "2026-10-20T14:15:21.438199+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:39Z",
           "grid_spacing_m": 500.0,
@@ -3471,7 +3394,7 @@
         "end_utc": "2026-10-20T13:41:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:40.441984+00:00",
+          "generated_utc": "2026-10-20T14:15:21.975256+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:40Z",
           "grid_spacing_m": 500.0,
@@ -3548,7 +3471,7 @@
         "end_utc": "2026-10-20T13:42:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:41.065745+00:00",
+          "generated_utc": "2026-10-20T14:15:22.463905+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:41Z",
           "grid_spacing_m": 500.0,
@@ -3625,7 +3548,7 @@
         "end_utc": "2026-10-20T13:43:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:41.691349+00:00",
+          "generated_utc": "2026-10-20T14:15:22.963126+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:42Z",
           "grid_spacing_m": 500.0,
@@ -3702,7 +3625,7 @@
         "end_utc": "2026-10-20T13:44:00+00:00",
         "stations_used": 20,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:42.277259+00:00",
+          "generated_utc": "2026-10-20T14:15:23.431891+00:00",
           "stations_used": 20,
           "latest_source_observation": "2026-10-20 13:43Z",
           "grid_spacing_m": 500.0,
@@ -3779,7 +3702,7 @@
         "end_utc": "2026-10-20T13:45:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:42.982623+00:00",
+          "generated_utc": "2026-10-20T14:15:23.977846+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:44Z",
           "grid_spacing_m": 500.0,
@@ -3856,7 +3779,7 @@
         "end_utc": "2026-10-20T13:46:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:43.690526+00:00",
+          "generated_utc": "2026-10-20T14:15:24.526610+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:45Z",
           "grid_spacing_m": 500.0,
@@ -3933,7 +3856,7 @@
         "end_utc": "2026-10-20T13:47:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:44.400019+00:00",
+          "generated_utc": "2026-10-20T14:15:25.076106+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:46Z",
           "grid_spacing_m": 500.0,
@@ -4010,7 +3933,7 @@
         "end_utc": "2026-10-20T13:48:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:45.109742+00:00",
+          "generated_utc": "2026-10-20T14:15:25.619756+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:47Z",
           "grid_spacing_m": 500.0,
@@ -4087,7 +4010,7 @@
         "end_utc": "2026-10-20T13:49:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:45.819816+00:00",
+          "generated_utc": "2026-10-20T14:15:26.167176+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:48Z",
           "grid_spacing_m": 500.0,
@@ -4164,7 +4087,7 @@
         "end_utc": "2026-10-20T13:50:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:46.525329+00:00",
+          "generated_utc": "2026-10-20T14:15:26.712816+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:49Z",
           "grid_spacing_m": 500.0,
@@ -4241,7 +4164,7 @@
         "end_utc": "2026-10-20T13:51:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:47.222141+00:00",
+          "generated_utc": "2026-10-20T14:15:27.257175+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 13:50Z",
           "grid_spacing_m": 500.0,
@@ -4318,7 +4241,7 @@
         "end_utc": "2026-10-20T13:52:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:47.931453+00:00",
+          "generated_utc": "2026-10-20T14:15:27.812567+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:51Z",
           "grid_spacing_m": 500.0,
@@ -4395,7 +4318,7 @@
         "end_utc": "2026-10-20T13:53:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:48.642290+00:00",
+          "generated_utc": "2026-10-20T14:15:28.365563+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:52Z",
           "grid_spacing_m": 500.0,
@@ -4472,7 +4395,7 @@
         "end_utc": "2026-10-20T13:54:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:49.354909+00:00",
+          "generated_utc": "2026-10-20T14:15:28.914567+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:53Z",
           "grid_spacing_m": 500.0,
@@ -4549,7 +4472,7 @@
         "end_utc": "2026-10-20T13:55:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:50.060698+00:00",
+          "generated_utc": "2026-10-20T14:15:29.464404+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:54Z",
           "grid_spacing_m": 500.0,
@@ -4626,7 +4549,7 @@
         "end_utc": "2026-10-20T13:56:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:50.769289+00:00",
+          "generated_utc": "2026-10-20T14:15:30.015230+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:55Z",
           "grid_spacing_m": 500.0,
@@ -4703,7 +4626,7 @@
         "end_utc": "2026-10-20T13:57:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:51.475388+00:00",
+          "generated_utc": "2026-10-20T14:15:30.568385+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:56Z",
           "grid_spacing_m": 500.0,
@@ -4780,7 +4703,7 @@
         "end_utc": "2026-10-20T13:58:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:52.186001+00:00",
+          "generated_utc": "2026-10-20T14:15:31.114794+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:57Z",
           "grid_spacing_m": 500.0,
@@ -4857,7 +4780,7 @@
         "end_utc": "2026-10-20T13:59:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:52.894563+00:00",
+          "generated_utc": "2026-10-20T14:15:31.677280+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:58Z",
           "grid_spacing_m": 500.0,
@@ -4934,7 +4857,7 @@
         "end_utc": "2026-10-20T14:00:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:53.607414+00:00",
+          "generated_utc": "2026-10-20T14:15:32.224742+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 13:59Z",
           "grid_spacing_m": 500.0,
@@ -5011,7 +4934,7 @@
         "end_utc": "2026-10-20T14:01:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:54.305730+00:00",
+          "generated_utc": "2026-10-20T14:15:32.763961+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 14:00Z",
           "grid_spacing_m": 500.0,
@@ -5088,7 +5011,7 @@
         "end_utc": "2026-10-20T14:02:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:55.033733+00:00",
+          "generated_utc": "2026-10-20T14:15:33.308856+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 14:01Z",
           "grid_spacing_m": 500.0,
@@ -5165,7 +5088,7 @@
         "end_utc": "2026-10-20T14:03:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:55.739742+00:00",
+          "generated_utc": "2026-10-20T14:15:33.858361+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 14:02Z",
           "grid_spacing_m": 500.0,
@@ -5242,7 +5165,7 @@
         "end_utc": "2026-10-20T14:04:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:56.363666+00:00",
+          "generated_utc": "2026-10-20T14:15:34.344957+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 14:03Z",
           "grid_spacing_m": 500.0,
@@ -5319,7 +5242,7 @@
         "end_utc": "2026-10-20T14:05:00+00:00",
         "stations_used": 20,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:56.952219+00:00",
+          "generated_utc": "2026-10-20T14:15:34.799050+00:00",
           "stations_used": 20,
           "latest_source_observation": "2026-10-20 14:04Z",
           "grid_spacing_m": 500.0,
@@ -5396,7 +5319,7 @@
         "end_utc": "2026-10-20T14:06:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:57.579796+00:00",
+          "generated_utc": "2026-10-20T14:15:35.287707+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 14:05Z",
           "grid_spacing_m": 500.0,
@@ -5473,7 +5396,7 @@
         "end_utc": "2026-10-20T14:07:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:58.289983+00:00",
+          "generated_utc": "2026-10-20T14:15:35.833028+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 14:06Z",
           "grid_spacing_m": 500.0,
@@ -5550,7 +5473,7 @@
         "end_utc": "2026-10-20T14:08:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:58.921385+00:00",
+          "generated_utc": "2026-10-20T14:15:36.321603+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 14:07Z",
           "grid_spacing_m": 500.0,
@@ -5627,7 +5550,7 @@
         "end_utc": "2026-10-20T14:09:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:13:59.642091+00:00",
+          "generated_utc": "2026-10-20T14:15:36.883652+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 14:08Z",
           "grid_spacing_m": 500.0,
@@ -5704,7 +5627,7 @@
         "end_utc": "2026-10-20T14:10:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:14:00.363094+00:00",
+          "generated_utc": "2026-10-20T14:15:37.433120+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 14:09Z",
           "grid_spacing_m": 500.0,
@@ -5781,7 +5704,7 @@
         "end_utc": "2026-10-20T14:11:00+00:00",
         "stations_used": 21,
         "analysis": {
-          "generated_utc": "2026-10-20T14:14:01.065463+00:00",
+          "generated_utc": "2026-10-20T14:15:37.974848+00:00",
           "stations_used": 21,
           "latest_source_observation": "2026-10-20 14:10Z",
           "grid_spacing_m": 500.0,
@@ -5858,7 +5781,7 @@
         "end_utc": "2026-10-20T14:12:00+00:00",
         "stations_used": 22,
         "analysis": {
-          "generated_utc": "2026-10-20T14:14:01.778126+00:00",
+          "generated_utc": "2026-10-20T14:15:38.521611+00:00",
           "stations_used": 22,
           "latest_source_observation": "2026-10-20 14:11Z",
           "grid_spacing_m": 500.0,
@@ -5920,6 +5843,83 @@
             "4.0": 1,
             "5.0": 1,
             "6.0": 1,
+            "7.0": 0,
+            "8.0": 0,
+            "9.0": 0,
+            "10.0": 0,
+            "11.0": 0,
+            "12.0": 0
+          },
+          "status": "ok"
+        }
+      },
+      {
+        "time_utc": "2026-10-20T14:12:00+00:00",
+        "end_utc": "2026-10-20T14:13:00+00:00",
+        "stations_used": 22,
+        "analysis": {
+          "generated_utc": "2026-10-20T14:15:39.070218+00:00",
+          "stations_used": 22,
+          "latest_source_observation": "2026-10-20 14:12Z",
+          "grid_spacing_m": 500.0,
+          "barnes_length_km": 10.0,
+          "barnes_gamma": 0.3,
+          "max_influence_km": 28.0,
+          "nearest_station_km": 12.0,
+          "min_nearby_stations": 3,
+          "hull_buffer_km": 12.0,
+          "grid_nx": 98,
+          "grid_ny": 131,
+          "valid_divergence_gridpoints": 8453,
+          "min_divergence_x1e4_s-1": -5.043470634711844,
+          "max_divergence_x1e4_s-1": 5.124217285966423,
+          "contour_segment_counts": {
+            "-12.0": 0,
+            "-11.0": 0,
+            "-10.0": 0,
+            "-9.0": 0,
+            "-8.0": 0,
+            "-7.0": 0,
+            "-6.0": 0,
+            "-5.0": 12,
+            "-4.0": 237,
+            "-3.0": 355,
+            "-2.0": 475,
+            "-1.0": 411,
+            "0.0": 201,
+            "1.0": 185,
+            "2.0": 166,
+            "3.0": 76,
+            "4.0": 26,
+            "5.0": 7,
+            "6.0": 0,
+            "7.0": 0,
+            "8.0": 0,
+            "9.0": 0,
+            "10.0": 0,
+            "11.0": 0,
+            "12.0": 0
+          },
+          "contour_polyline_counts": {
+            "-12.0": 0,
+            "-11.0": 0,
+            "-10.0": 0,
+            "-9.0": 0,
+            "-8.0": 0,
+            "-7.0": 0,
+            "-6.0": 0,
+            "-5.0": 1,
+            "-4.0": 3,
+            "-3.0": 5,
+            "-2.0": 5,
+            "-1.0": 7,
+            "0.0": 2,
+            "1.0": 2,
+            "2.0": 2,
+            "3.0": 2,
+            "4.0": 1,
+            "5.0": 1,
+            "6.0": 0,
             "7.0": 0,
             "8.0": 0,
             "9.0": 0,
